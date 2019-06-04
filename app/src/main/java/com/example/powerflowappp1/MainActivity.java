@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //3 buses
         movButton1 = findViewById(R.id.busesQ1);
         movButton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 moveButton1();
             }
         });
-
+        //4 buses
         movButton2 = findViewById(R.id.busesQ2);
         movButton2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 moveButton2();
             }
         });
-
+        //5 buses
         movButton3 = findViewById(R.id.busesQ3);
         movButton3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 moveButton4();
+            }
+        });
+        //7 buses
+        movButton5 = findViewById(R.id.busesQ5);
+        movButton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveButton5();
             }
         });
 
@@ -73,5 +81,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, Main5Activity.class);
         startActivity(intent);
     }
-
+    //7 buses
+    private void moveButton5(){
+        Intent intent = new Intent(MainActivity.this, Main6Activity.class);
+        startActivity(intent);
+    }
 }

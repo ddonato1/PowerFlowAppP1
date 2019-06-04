@@ -148,13 +148,13 @@
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="208dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="#8BC34A"
         android:text="Save"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintHorizontal_bias="0.614"
         app:layout_constraintStart_toEndOf="@+id/Voltage2"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -212,7 +212,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Enter the number of iterations:"
@@ -221,7 +221,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Voltage6" />
+        app:layout_constraintTop_toBottomOf="@+id/Voltage7" />
 
     <EditText
         android:id="@+id/editText"
@@ -247,7 +247,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="8dp"
         android:background="#8BC34A"
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -261,7 +261,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
@@ -278,14 +278,47 @@
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="496dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="#8BC34A"
         android:text="Save"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintStart_toEndOf="@+id/Voltage6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Voltage7"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Voltage bar 7"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Voltage6" />
+
+    <Button
+        android:id="@+id/saveButton7"
+        android:layout_width="81dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="568dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#8BC34A"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.641"
+        app:layout_constraintStart_toEndOf="@+id/Voltage7"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
