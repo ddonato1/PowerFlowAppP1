@@ -35,15 +35,43 @@ public class MainActivity extends AppCompatActivity {
                 moveButton2();
             }
         });
-    }
 
+        movButton3 = findViewById(R.id.busesQ3);
+        movButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveButton3();
+            }
+        });
+        //6 buses
+        movButton4 = findViewById(R.id.busesQ4);
+        movButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveButton4();
+            }
+        });
+
+    }
+    // 3 buses
     private void moveButton1(){
         Intent intent = new Intent(MainActivity.this, Main2Activity.class);
         startActivity(intent);
     }
-
+    //4 buses
     private void moveButton2(){
         Intent intent = new Intent(MainActivity.this, Main3Activity.class);
         startActivity(intent);
     }
+    //5 buses
+    private void moveButton3(){
+        Intent intent = new Intent(MainActivity.this, Main4Activity.class);
+        startActivity(intent);
+    }
+    //6 buses
+    private void moveButton4(){
+        Intent intent = new Intent(MainActivity.this, Main5Activity.class);
+        startActivity(intent);
+    }
+
 }
