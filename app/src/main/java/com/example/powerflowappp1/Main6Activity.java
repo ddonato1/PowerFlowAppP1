@@ -8,76 +8,76 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Main6Activity extends AppCompatActivity {
-    EditText volNum1;
-    EditText volNum2;
-    EditText volNum3;
-    EditText volNum4;
-    EditText volNum5;
-    EditText volNum6;
-    EditText volNum7;
-    EditText iterNum;
+    EditText volnum1;
+    EditText volnum2;
+    EditText volnum3;
+    EditText volnum4;
+    EditText volnum5;
+    EditText volnum6;
+    EditText volnum7;
+    EditText IterNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main6);
 
-        volNum1 = findViewById(R.id.voltS1);
-        volNum2 = findViewById(R.id.voltage2);
-        volNum3 = findViewById(R.id.voltage3);
-        volNum4 = findViewById(R.id.voltage4);
-        volNum5 = findViewById(R.id.voltage5);
-        volNum6 = findViewById(R.id.voltage6);
-        volNum7 = findViewById(R.id.voltage7);
-        iterNum = findViewById(R.id.iternumber);
+        volnum1 = findViewById(R.id.voltS1);
+        volnum2 = findViewById(R.id.voltage2);
+        volnum3 = findViewById(R.id.voltage3);
+        volnum4 = findViewById(R.id.voltage4);
+        volnum5 = findViewById(R.id.voltage5);
+        volnum6 = findViewById(R.id.voltage6);
+        volnum7 = findViewById(R.id.voltage7);
+        IterNum = findViewById(R.id.iternumber);
 
         Intent intent = getIntent();
     }
 
     public void SaveButton_1(View view){
-        String voltages1 = volNum1.getText().toString();
+        String voltages1 = volnum1.getText().toString();
 
         Toast.makeText(this, "Your answer has been saved: " +voltages1, Toast.LENGTH_SHORT).show();
     }
 
     public void SaveButton_2(View view){
-        String voltages2 = volNum2.getText().toString();
+        String voltages2 = volnum2.getText().toString();
 
         Toast.makeText(this, "Your answer has been saved: " +voltages2, Toast.LENGTH_SHORT).show();
     }
 
     public void SaveButton_3(View view){
-        String voltages3 = volNum3.getText().toString();
+        String voltages3 = volnum3.getText().toString();
 
         Toast.makeText(this, "Your answer has been saved: " +voltages3, Toast.LENGTH_SHORT).show();
     }
 
     public void SaveButton_4(View view){
-        String voltages4 = volNum4.getText().toString();
+        String voltages4 = volnum4.getText().toString();
 
         Toast.makeText(this, "Your answer has been saved: " +voltages4, Toast.LENGTH_SHORT).show();
     }
 
     public void SaveButton_5(View view){
-        String voltages5 = volNum5.getText().toString();
+        String voltages5 = volnum5.getText().toString();
 
         Toast.makeText(this, "Your answer has been saved: " +voltages5, Toast.LENGTH_SHORT).show();
     }
 
     public void SaveButton_6(View view){
-        String voltages6 = volNum6.getText().toString();
+        String voltages6 = volnum6.getText().toString();
 
         Toast.makeText(this, "Your answer has been saved: " +voltages6, Toast.LENGTH_SHORT).show();
     }
 
     public void SaveButton_7(View view){
-        String voltages7 = volNum7.getText().toString();
+        String voltages7 = volnum7.getText().toString();
 
         Toast.makeText(this, "Your answer has been saved: " +voltages7, Toast.LENGTH_SHORT).show();
     }
 
     public void SaveButton_8(View view){
-        String iterations = iterNum.getText().toString();
+        String iterations = IterNum.getText().toString();
         int iterNUMF = Integer.parseInt(iterations);
 
         Toast.makeText(this, "Your answer has been saved: " +iterNUMF, Toast.LENGTH_SHORT).show();
