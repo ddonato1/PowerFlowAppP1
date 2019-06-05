@@ -45,6 +45,7 @@
             android:layout_toEndOf="@+id/iterNum"
             android:layout_toRightOf="@+id/iterNum"
             android:background="#8BC34A"
+            android:onClick="SaveButton7"
             android:text="Save" />
 
         <Button
@@ -63,6 +64,7 @@
             android:layout_toEndOf="@+id/volta6"
             android:layout_toRightOf="@+id/volta6"
             android:background="#8BC34A"
+            android:onClick="SaveButton6"
             android:text="Save" />
 
         <Button
@@ -80,6 +82,7 @@
             android:layout_toEndOf="@+id/volta5"
             android:layout_toRightOf="@+id/volta5"
             android:background="#8BC34A"
+            android:onClick="SaveButton5"
             android:text="Save" />
 
         <Button
@@ -97,6 +100,7 @@
             android:layout_toEndOf="@+id/volta4"
             android:layout_toRightOf="@+id/volta4"
             android:background="#8BC34A"
+            android:onClick="SaveButton4"
             android:text="Save" />
 
         <Button
@@ -114,6 +118,7 @@
             android:layout_toEndOf="@+id/volta3"
             android:layout_toRightOf="@+id/volta3"
             android:background="#8BC34A"
+            android:onClick="SaveButton3"
             android:text="Save" />
 
         <Button
@@ -131,6 +136,7 @@
             android:layout_toEndOf="@+id/volta2"
             android:layout_toRightOf="@+id/volta2"
             android:background="#8BC34A"
+            android:onClick="SaveButton2"
             android:text="Save" />
 
         <Button
@@ -148,6 +154,8 @@
             android:layout_toEndOf="@+id/volta1"
             android:layout_toRightOf="@+id/volta1"
             android:background="#8BC34A"
+            android:onClick="SaveButton1"
+            android:scrollHorizontally="true"
             android:text="Save" />
 
         <TextView
