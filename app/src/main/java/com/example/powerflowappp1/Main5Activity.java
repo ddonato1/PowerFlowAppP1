@@ -21,13 +21,13 @@ public class Main5Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
 
-        VOLTNUM1 = findViewById(R.id.VoltageSlack);
-        VOLTNUM2 = findViewById(R.id.Voltage2);
-        VOLTNUM3 = findViewById(R.id.Voltage3);
-        VOLTNUM4 = findViewById(R.id.Voltage4);
-        VOLTNUM5 = findViewById(R.id.Voltage5);
-        VOLTNUM6 = findViewById(R.id.Voltage6);
-        ITERNUM = findViewById(R.id.Iterations);
+        VOLTNUM1 = findViewById(R.id.volta1);
+        VOLTNUM2 = findViewById(R.id.volta2);
+        VOLTNUM3 = findViewById(R.id.volta3);
+        VOLTNUM4 = findViewById(R.id.volta4);
+        VOLTNUM5 = findViewById(R.id.volta5);
+        VOLTNUM6 = findViewById(R.id.volta6);
+        ITERNUM = findViewById(R.id.iterNum);
 
         Intent intent = getIntent();
     }
