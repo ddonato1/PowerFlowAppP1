@@ -11,6 +11,7 @@ public class Main3Activity extends AppCompatActivity {
     EditText volNum1;
     EditText volNum2;
     EditText volNum3;
+    EditText volNum4;
     EditText iterNum;
 
     @Override
@@ -18,10 +19,11 @@ public class Main3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        volNum1 = findViewById(R.id.volt1);
-        volNum2 = findViewById(R.id.volt2);
-        volNum3 = findViewById(R.id.volt3);
-        iterNum = findViewById(R.id.numIter);
+        volNum1 = findViewById(R.id.volt_1);
+        volNum2 = findViewById(R.id.volt_2);
+        volNum3 = findViewById(R.id.volt_3);
+        volNum4 = findViewById(R.id.volt_4);
+        iterNum = findViewById(R.id.num_Iter);
 
         Intent intent = getIntent();
     }
@@ -45,6 +47,12 @@ public class Main3Activity extends AppCompatActivity {
     }
 
     public void saveButton_4(View view){
+        String voltages4 = volNum4.getText().toString();
+
+        Toast.makeText(this, "Your answer has been saved: " +voltages4, Toast.LENGTH_SHORT).show();
+    }
+
+    public void saveButton_5(View view){
         String iterations = iterNum.getText().toString();
         int iterNUMF = Integer.parseInt(iterations);
 

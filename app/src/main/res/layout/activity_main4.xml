@@ -144,7 +144,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Voltage5" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/iterNUM1"
         android:layout_width="115dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -169,6 +169,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="#8BC34A"
+        android:onClick="Savebutton_1"
         android:text="Save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.698"
@@ -185,6 +186,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="#8BC34A"
+        android:onClick="Savebutton_2"
         android:text="Save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.698"
@@ -201,6 +203,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="#8BC34A"
+        android:onClick="Savebutton_3"
         android:text="Save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.698"
@@ -217,6 +220,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="#8BC34A"
+        android:onClick="Savebutton_4"
         android:text="Save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.698"
@@ -234,6 +238,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="#8BC34A"
+        android:onClick="Savebutton_5"
         android:text="Save"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -253,11 +258,12 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="#8BC34A"
+        android:onClick="Savebutton_6"
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.698"
-        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintStart_toEndOf="@+id/iterNUM1"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.16" />
 
