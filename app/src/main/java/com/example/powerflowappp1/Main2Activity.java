@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -12,6 +13,7 @@ public class Main2Activity extends AppCompatActivity {
     EditText volNum2;
     EditText volNum3;
     EditText iterNum;
+    private Button moveNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,14 @@ public class Main2Activity extends AppCompatActivity {
         volNum2 = findViewById(R.id.volt2);
         volNum3 = findViewById(R.id.volt3);
         iterNum = findViewById(R.id.numIter);
+
+        moveNext = findViewById(R.id.next);
+        moveNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveNext();
+            }
+        });
 
         Intent intent = getIntent();
     }
@@ -49,5 +59,10 @@ public class Main2Activity extends AppCompatActivity {
         int iterNUMF = Integer.parseInt(iterations);
 
         Toast.makeText(this, "Your answer has been saved: " +iterNUMF, Toast.LENGTH_SHORT).show();
+    }
+
+    private void moveNext(){
+        Intent intent = new Intent(Main2Activity.this, Main7Activity.class);
+        startActivity(intent);
     }
 }
