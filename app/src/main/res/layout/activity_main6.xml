@@ -15,7 +15,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="850dp">
+        android:layout_height="900dp">
         <!--android:weightSum="10"-->
 
         <TextView
@@ -210,7 +210,7 @@
             android:layout_marginStart="120dp"
             android:layout_marginLeft="106dp"
             android:layout_marginTop="28dp"
-            android:layout_marginEnd="75dp"
+            android:layout_marginEnd="60dp"
             android:layout_marginRight="75dp"
             android:layout_toEndOf="@+id/iternumber"
             android:layout_toRightOf="@+id/iternumber"
@@ -328,6 +328,23 @@
             android:layout_marginTop="24dp"
             android:ems="10"
             android:inputType="number" />
+
+        <Button
+            android:id="@+id/NextButton"
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/textView7"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="161dp"
+            android:layout_marginLeft="161dp"
+            android:layout_marginTop="111dp"
+            android:layout_marginEnd="162dp"
+            android:layout_marginRight="162dp"
+            android:background="#00BCD4"
+            android:text="Next" />
 
     </RelativeLayout>
 
