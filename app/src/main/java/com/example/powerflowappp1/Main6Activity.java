@@ -94,7 +94,7 @@ public class Main6Activity extends AppCompatActivity {
     }
 
     private void moveNextbut(){
-        Intent intent = new Intent(Main6Activity.this, Main11Activity.class);
+        Intent intent = new Intent(Main6Activity.this, Part3of7buses.class);
         startActivity(intent);
     }
 }

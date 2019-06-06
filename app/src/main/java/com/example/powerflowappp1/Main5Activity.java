@@ -129,7 +129,7 @@ public class Main5Activity extends AppCompatActivity {
     }
 
     private void movenextB(){
-        Intent intent = new Intent(Main5Activity.this, Main10Activity.class);
+        Intent intent = new Intent(Main5Activity.this, Part3of6buses.class);
         startActivity(intent);
     }
 }

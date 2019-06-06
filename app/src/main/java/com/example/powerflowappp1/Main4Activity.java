@@ -78,7 +78,7 @@ public class Main4Activity extends AppCompatActivity {
     }
 
     private void moveNextB(){
-        Intent intent = new Intent(Main4Activity.this, Main9Activity.class);
+        Intent intent = new Intent(Main4Activity.this, Part3of5buses.class);
         startActivity(intent);
     }
 }

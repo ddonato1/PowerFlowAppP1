@@ -62,7 +62,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     private void moveNext(){
-        Intent intent = new Intent(Main2Activity.this, Main7Activity.class);
+        Intent intent = new Intent(Main2Activity.this, Part3of3buses.class);
         startActivity(intent);
     }
 }
