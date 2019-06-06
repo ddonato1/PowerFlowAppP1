@@ -1,9 +1,261 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Part3of6buses">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="760dp">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="166dp"
+            android:layout_marginLeft="166dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="160dp"
+            android:layout_marginRight="160dp"
+            android:text="Part 3"
+            android:textColor="#4CAF50"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="124dp"
+            android:layout_marginRight="124dp"
+            android:text="Enter the angles given:"
+            android:textColor="#009688"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/angulo1"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/textView7"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Angle slack"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/angulo2"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/angulo1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Angle bar 2"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/angulo3"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/angulo2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Angle bar 3"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/angulo4"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/angulo3"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Angel bar 4"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/angulo5"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/angulo4"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Angle bar 5"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/angulo6"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/angulo5"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Angle bar 6"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/SbuttonA1"
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/textView7"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="53dp"
+            android:layout_toEndOf="@+id/angulo1"
+            android:layout_toRightOf="@+id/angulo1"
+            android:background="#8BC34A"
+            android:onClick="sbuttonAngle1"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/SbuttonA2"
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/SbuttonA1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="53dp"
+            android:layout_toEndOf="@+id/angulo2"
+            android:layout_toRightOf="@+id/angulo2"
+            android:background="#8BC34A"
+            android:onClick="sbuttonAngle2"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/SbuttonA3"
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/SbuttonA2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="53dp"
+            android:layout_toEndOf="@+id/angulo3"
+            android:layout_toRightOf="@+id/angulo3"
+            android:background="#8BC34A"
+            android:onClick="sbuttonAngle3"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/SbuttonA4"
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/SbuttonA3"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="53dp"
+            android:layout_toEndOf="@+id/angulo4"
+            android:layout_toRightOf="@+id/angulo4"
+            android:background="#8BC34A"
+            android:onClick="sbuttonAngle4"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/SbuttonA5"
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/SbuttonA4"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="53dp"
+            android:layout_toEndOf="@+id/angulo5"
+            android:layout_toRightOf="@+id/angulo5"
+            android:background="#8BC34A"
+            android:onClick="sbuttonAngle5"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/SbuttonA6"
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/SbuttonA5"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="53dp"
+            android:layout_toEndOf="@+id/angulo6"
+            android:layout_toRightOf="@+id/angulo6"
+            android:background="#8BC34A"
+            android:onClick="sbuttonAngle6"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/nextB"
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/textView7"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="161dp"
+            android:layout_marginLeft="161dp"
+            android:layout_marginTop="512dp"
+            android:layout_marginEnd="162dp"
+            android:layout_marginRight="162dp"
+            android:background="#00BCD4"
+            android:text="Next" />
+
+
+    </RelativeLayout>
+</ScrollView>
