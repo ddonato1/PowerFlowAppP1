@@ -1,9 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Part3of3buses">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="730dp">
+
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="181dp"
+            android:layout_marginLeft="181dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="180dp"
+            android:layout_marginRight="180dp"
+            android:text="Part 3"
+            android:textColor="#4CAF50"
+            android:textColorLink="#4CAF50"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView13"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="132dp"
+            android:layout_marginLeft="132dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="132dp"
+            android:layout_marginRight="132dp"
+            android:text="Enter the angles given:"
+            android:textColor="#009688" />
+
+        <EditText
+            android:id="@+id/angle1"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/textView14"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:hint="Angle slack"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/angle2"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/angle1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:hint="Angle bar 2"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/angle3"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/angle2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:hint="Angle bar 3"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/sButtonA1"
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/textView14"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_toEndOf="@+id/angle1"
+            android:layout_toRightOf="@+id/angle1"
+            android:background="#8BC34A"
+            android:onClick="saveButton_1"
+            android:text="Save"
+            android:textColor="#313131" />
+
+        <Button
+            android:id="@+id/sButtonA2"
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/sButtonA1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_toEndOf="@+id/angle2"
+            android:layout_toRightOf="@+id/angle2"
+            android:background="#8BC34A"
+            android:onClick="saveButton_2"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/sButtonA3"
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/sButtonA2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_toEndOf="@+id/angle3"
+            android:layout_toRightOf="@+id/angle3"
+            android:background="#8BC34A"
+            android:onClick="saveButton_3"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/nextP3"
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/angle3"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="162dp"
+            android:layout_marginLeft="162dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="162dp"
+            android:layout_marginRight="162dp"
+            android:background="#00BCD4"
+            android:text="Next" />
+    </RelativeLayout>
+
+
+
+</ScrollView>
