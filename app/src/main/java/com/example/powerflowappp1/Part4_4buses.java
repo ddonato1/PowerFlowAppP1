@@ -27,18 +27,18 @@ public class Part4_4buses extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_part4_4buses);
 
-        zbus_11 = findViewById(R.id.zbus11);
-        zbus_12 = findViewById(R.id.zbus12);
-        zbus_13 = findViewById(R.id.zbus13);
-        zbus_14 = findViewById(R.id.zbus14);
-        zbus_22 = findViewById(R.id.zbus22);
-        zbus_23 = findViewById(R.id.zbus23);
-        zbus_24 = findViewById(R.id.zbus24);
-        zbus_33 = findViewById(R.id.zbus33);
-        zbus_34 = findViewById(R.id.zbus34);
-        zbus_44 = findViewById(R.id.zbus44);
+        zbus_11 = findViewById(R.id.Z11);
+        zbus_12 = findViewById(R.id.Z12);
+        zbus_13 = findViewById(R.id.Z13);
+        zbus_14 = findViewById(R.id.Z14);
+        zbus_22 = findViewById(R.id.Z22);
+        zbus_23 = findViewById(R.id.Z23);
+        zbus_24 = findViewById(R.id.Z24);
+        zbus_33 = findViewById(R.id.Z33);
+        zbus_34 = findViewById(R.id.Z34);
+        zbus_44 = findViewById(R.id.Z44);
 
-        nextButtonZ = findViewById(R.id.nextbZ);
+        nextButtonZ = findViewById(R.id.nextP44B);
         nextButtonZ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

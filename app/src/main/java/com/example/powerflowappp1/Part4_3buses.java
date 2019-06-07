@@ -23,14 +23,14 @@ public class Part4_3buses extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_part4_3buses);
 
-        zbus_11 = findViewById(R.id.zbus11);
-        zbus_12 = findViewById(R.id.zbus12);
-        zbus_13 = findViewById(R.id.zbus13);
-        zbus_22 = findViewById(R.id.zbus22);
-        zbus_23 = findViewById(R.id.zbus23);
-        zbus_33 = findViewById(R.id.zbus33);
+        zbus_11 = findViewById(R.id.z11);
+        zbus_12 = findViewById(R.id.z12);
+        zbus_13 = findViewById(R.id.z13);
+        zbus_22 = findViewById(R.id.z22);
+        zbus_23 = findViewById(R.id.z23);
+        zbus_33 = findViewById(R.id.z33);
 
-        nextButtonZ = findViewById(R.id.nextbZ);
+        nextButtonZ = findViewById(R.id.nextP4_3B);
         nextButtonZ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
