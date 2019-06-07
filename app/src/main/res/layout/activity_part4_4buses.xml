@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1350dp">
+        android:layout_height="900dp">
 
 
         <TextView
@@ -118,28 +118,10 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/Z21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Z14"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="148dp"
-            android:layout_marginLeft="148dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="148dp"
-            android:layout_marginRight="148dp"
-            android:ems="10"
-            android:hint="Z21"
-            android:inputType="textPersonName" />
-
-        <EditText
             android:id="@+id/Z22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Z21"
+            android:layout_below="@+id/Z14"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -190,46 +172,10 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/Z31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Z24"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="148dp"
-            android:layout_marginLeft="148dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="148dp"
-            android:layout_marginRight="148dp"
-            android:ems="10"
-            android:hint="Z31"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/Z32"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Z31"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="148dp"
-            android:layout_marginLeft="148dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="148dp"
-            android:layout_marginRight="148dp"
-            android:ems="10"
-            android:hint="Z32"
-            android:inputType="textPersonName" />
-
-        <EditText
             android:id="@+id/Z33"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Z32"
+            android:layout_below="@+id/Z24"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -247,60 +193,6 @@
             android:id="@+id/Z34"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Z41"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="148dp"
-            android:layout_marginLeft="148dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="148dp"
-            android:layout_marginRight="148dp"
-            android:ems="10"
-            android:hint="Z34"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/Z41"
-            android:layout_width="202dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Z42"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="148dp"
-            android:layout_marginLeft="148dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="148dp"
-            android:layout_marginRight="148dp"
-            android:ems="10"
-            android:hint="Z41"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/Z42"
-            android:layout_width="211dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Z43"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="148dp"
-            android:layout_marginLeft="148dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="148dp"
-            android:layout_marginRight="148dp"
-            android:ems="10"
-            android:hint="Z42"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/Z43"
-            android:layout_width="202dp"
-            android:layout_height="60dp"
             android:layout_below="@+id/Z33"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
@@ -312,7 +204,7 @@
             android:layout_marginEnd="148dp"
             android:layout_marginRight="148dp"
             android:ems="10"
-            android:hint="Z43"
+            android:hint="Z34"
             android:inputType="textPersonName" />
 
         <EditText

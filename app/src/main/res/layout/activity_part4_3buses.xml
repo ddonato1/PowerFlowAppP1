@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="900dp">
+        android:layout_height="730dp">
 
 
         <TextView
@@ -100,28 +100,10 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/z21"
-            android:layout_width="115dp"
-            android:layout_height="48dp"
-            android:layout_below="@+id/z13"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="148dp"
-            android:layout_marginLeft="148dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="148dp"
-            android:layout_marginRight="148dp"
-            android:ems="10"
-            android:hint="Z21"
-            android:inputType="textPersonName" />
-
-        <EditText
             android:id="@+id/z22"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/z21"
+            android:layout_below="@+id/z13"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -154,46 +136,10 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/z31"
-            android:layout_width="115dp"
-            android:layout_height="48dp"
-            android:layout_below="@+id/z23"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="148dp"
-            android:layout_marginLeft="148dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="148dp"
-            android:layout_marginRight="148dp"
-            android:ems="10"
-            android:hint="Z31"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/z32"
-            android:layout_width="115dp"
-            android:layout_height="48dp"
-            android:layout_below="@+id/z31"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="148dp"
-            android:layout_marginLeft="148dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="148dp"
-            android:layout_marginRight="148dp"
-            android:ems="10"
-            android:hint="Z32"
-            android:inputType="textPersonName" />
-
-        <EditText
             android:id="@+id/z33"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/z32"
+            android:layout_below="@+id/z23"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
