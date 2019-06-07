@@ -1,9 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Part4_3buses">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="900dp">
+
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="184dp"
+            android:layout_marginLeft="184dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="184dp"
+            android:layout_marginRight="184dp"
+            android:text="Part 4"
+            android:textColor="#4CAF50" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView19"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="128dp"
+            android:layout_marginLeft="128dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="128dp"
+            android:layout_marginRight="128dp"
+            android:text="Enter the Z values given:"
+            android:textColor="#009688" />
+
+        <EditText
+            android:id="@+id/z11"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/textView20"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Z11 "
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/z12"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/z11"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Z12"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/z13"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/z12"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Z13"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/z21"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/z13"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Z21"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/z22"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/z21"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Z22"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/z23"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/z22"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Z23"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/z31"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/z23"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Z31"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/z32"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/z31"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Z32"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/z33"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/z32"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Z33"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/nextP4_3B"
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/z33"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="162dp"
+            android:layout_marginLeft="162dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="162dp"
+            android:layout_marginRight="162dp"
+            android:background="#00BCD4"
+            android:text="Next" />
+    </RelativeLayout>
+
+</ScrollView>
