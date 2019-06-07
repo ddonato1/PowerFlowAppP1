@@ -53,7 +53,7 @@ public class Part3of3buses extends AppCompatActivity {
     }
 
     private void moveNext(){
-        Intent intent = new Intent(Part3of3buses.this, Part4_4buses.class);
+        Intent intent = new Intent(Part3of3buses.this, Part4_3buses.class);
         startActivity(intent);
     }
 

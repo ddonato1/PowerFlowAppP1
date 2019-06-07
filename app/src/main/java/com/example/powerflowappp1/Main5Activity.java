@@ -39,51 +39,9 @@ public class Main5Activity extends AppCompatActivity {
             }
         });
 
-//        VOLTNUM1.setOnClickListener(this);
-//        VOLTNUM2.setOnClickListener(this);
-//        VOLTNUM3.setOnClickListener(this);
-//        VOLTNUM4.setOnClickListener(this);
-//        VOLTNUM5.setOnClickListener(this);
-//        VOLTNUM6.setOnClickListener(this);
-//        ITERNUM.setOnClickListener(this);
-
         Intent intent = getIntent();
     }
 
-//    @Override
-//    public void onClick(View v) {
-//        switch (v.getId()){
-//            case R.id.volta1:
-//                String voltages1 = VOLTNUM1.getText().toString();
-//                Toast.makeText(this, "Your answer has been saved: " +voltages1, Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.volta2:
-//                String voltages2 = VOLTNUM2.getText().toString();
-//                Toast.makeText(this, "Your answer has been saved: " +voltages2, Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.volta3:
-//                String voltages3 = VOLTNUM3.getText().toString();
-//                Toast.makeText(this, "Your answer has been saved: " +voltages3, Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.volta4:
-//                String voltages4 = VOLTNUM4.getText().toString();
-//                Toast.makeText(this, "Your answer has been saved: " +voltages4, Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.volta5:
-//                String voltages5 = VOLTNUM5.getText().toString();
-//                Toast.makeText(this, "Your answer has been saved: " +voltages5, Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.volta6:
-//                String voltages6 = VOLTNUM6.getText().toString();
-//                Toast.makeText(this, "Your answer has been saved: " +voltages6, Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.iterNum:
-//                String iterations = ITERNUM.getText().toString();
-//                int iterNUMF = Integer.parseInt(iterations);
-//                Toast.makeText(this, "Your answer has been saved: " +iterNUMF, Toast.LENGTH_SHORT).show();
-//                break;
-//        }
-//    }
 
     public void SaveButton1(View view){
         String voltages1 = VOLTNUM1.getText().toString();
