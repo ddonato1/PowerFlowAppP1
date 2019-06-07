@@ -12,5 +12,7 @@ public class Part4_1 extends AppCompatActivity {
         setContentView(R.layout.activity_part4_1);
 
         Intent intent = getIntent();
+
+
     }
 }
