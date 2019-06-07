@@ -29,7 +29,7 @@ public class Main4Activity extends AppCompatActivity {
         volNum5 = findViewById(R.id.Voltage5);
         iterNUM = findViewById(R.id.iterNUM1);
 
-        moveNextB = findViewById(R.id.nextBut);
+        moveNextB = findViewById(R.id.nextButP3);
         moveNextB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

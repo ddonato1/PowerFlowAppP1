@@ -51,10 +51,9 @@ public class Part3of3buses extends AppCompatActivity {
 
         Toast.makeText(this, "Your answer has been saved: " +angle3, Toast.LENGTH_SHORT).show();
     }
-
-
+    
     private void moveNext(){
-        Intent intent = new Intent(Part3of3buses.this, Part3of3buses.class);
+        Intent intent = new Intent(Part3of3buses.this, Part4_1.class);
         startActivity(intent);
     }
 
