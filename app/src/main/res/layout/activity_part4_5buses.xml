@@ -317,7 +317,7 @@
             android:inputType="textPersonName" />
 
         <Button
-            android:id="@+id/savebZ"
+            android:id="@+id/nextbZ"
             android:layout_width="81dp"
             android:layout_height="38dp"
             android:layout_below="@+id/zbus55"
@@ -330,8 +330,9 @@
             android:layout_marginTop="43dp"
             android:layout_marginEnd="162dp"
             android:layout_marginRight="162dp"
-            android:background="#8BC34A"
-            android:text="Save" />
+            android:background="#00BCD4"
+            android:onClick="nextButtonZ"
+            android:text="Next" />
     </RelativeLayout>
 
 </ScrollView>
