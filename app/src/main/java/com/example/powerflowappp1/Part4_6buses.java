@@ -58,7 +58,7 @@ public class Part4_6buses extends AppCompatActivity {
         zbus56 = findViewById(R.id.Zbus56);
         zbus66 = findViewById(R.id.Zbus66);
 
-        nextbuttonZ = findViewById(R.id.nextbZ);
+        nextbuttonZ = findViewById(R.id.nextButtonZ);
         nextbuttonZ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
