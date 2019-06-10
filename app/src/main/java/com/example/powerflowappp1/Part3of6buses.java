@@ -20,7 +20,7 @@ public class Part3of6buses extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.part3_7buses);
+        setContentView(R.layout.part3_6buses);
 
         ang1 = findViewById(R.id.angulo1);
         ang2 = findViewById(R.id.angulo2);
