@@ -100,14 +100,23 @@ public class Main6Activity extends AppCompatActivity {
         String voltages4 = volNum4.getText().toString();
         String voltages5 = volNum5.getText().toString();
         String voltages6 = volNum6.getText().toString();
+        String voltages7 = volNum7.getText().toString();
 
         String iterations = iterNum.getText().toString();
-        int iterNUMF = Integer.parseInt(iterations);
+        //int iterNUMF = Integer.parseInt(iterations);
 
-        Toast.makeText(this, "Your answer has been saved: " , Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Your answer has been saved: " , Toast.LENGTH_SHORT).show();
 
 
-        Intent intent = new Intent(Main6Activity.this, Part3of7buses.class);
-        startActivity(intent);
+        Intent intent5 = new Intent(Main6Activity.this, Part3of7buses.class);
+        intent5.putExtra("Voltage 1: ", voltages1);
+        intent5.putExtra("Voltage 2: ", voltages2);
+        intent5.putExtra("Voltage 3: ", voltages3);
+        intent5.putExtra("Voltage 4: ", voltages4);
+        intent5.putExtra("Voltage 5: ", voltages5);
+        intent5.putExtra("Voltage 6: ", voltages6);
+        intent5.putExtra("Voltage 7: ", voltages7);
+        intent5.putExtra("Iterations: ", iterations);
+        startActivity(intent5);
     }
 }

@@ -60,7 +60,7 @@ public class Part4_5buses extends AppCompatActivity {
     }
 
     private void nextButtonZ(){
-        Intent intent = new Intent(Part4_5buses.this, Part4_5buses.class);
+        Intent intent = new Intent(Part4_5buses.this, Part4_1.class);
         startActivity(intent);
     }
 }

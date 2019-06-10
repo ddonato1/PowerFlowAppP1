@@ -90,61 +90,6 @@
             android:inputType="textPersonName" />
 
         <Button
-            android:id="@+id/sButtonA1"
-            android:layout_width="81dp"
-            android:layout_height="38dp"
-            android:layout_below="@+id/textView14"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="120dp"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginRight="60dp"
-            android:layout_toEndOf="@+id/angle1"
-            android:layout_toRightOf="@+id/angle1"
-            android:background="#8BC34A"
-            android:onClick="saveButton_1"
-            android:text="Save"
-            android:textColor="#313131" />
-
-        <Button
-            android:id="@+id/sButtonA2"
-            android:layout_width="81dp"
-            android:layout_height="38dp"
-            android:layout_below="@+id/sButtonA1"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="120dp"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="34dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginRight="60dp"
-            android:layout_toEndOf="@+id/angle2"
-            android:layout_toRightOf="@+id/angle2"
-            android:background="#8BC34A"
-            android:onClick="saveButton_2"
-            android:text="Save" />
-
-        <Button
-            android:id="@+id/sButtonA3"
-            android:layout_width="81dp"
-            android:layout_height="38dp"
-            android:layout_below="@+id/sButtonA2"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="120dp"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="34dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginRight="60dp"
-            android:layout_toEndOf="@+id/angle3"
-            android:layout_toRightOf="@+id/angle3"
-            android:background="#8BC34A"
-            android:onClick="saveButton_3"
-            android:text="Save" />
-
-        <Button
             android:id="@+id/nextP3"
             android:layout_width="81dp"
             android:layout_height="38dp"

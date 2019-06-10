@@ -81,7 +81,7 @@ public class Main3Activity extends AppCompatActivity {
         String voltages4 = volNum4.getText().toString();
         String iterations = iterNum.getText().toString();
         //int iterNUMF = Integer.parseInt(iterations);
-        Intent intent2 = new Intent(Main3Activity.this, Part4_1.class);
+        Intent intent2 = new Intent(Main3Activity.this, Part3of4buses.class);
         intent2.putExtra("Voltage 1: ", voltages1);
         intent2.putExtra("Voltage 2: ", voltages2);
         intent2.putExtra("Voltage 3: ", voltages3);

@@ -84,7 +84,7 @@ public class Part4_7buses extends AppCompatActivity {
     }
 
     private void nextBUTZ(){
-        Intent intent = new Intent(Part4_7buses.this, Part4_7buses.class);
+        Intent intent = new Intent(Part4_7buses.this, Part4_1.class);
         startActivity(intent);
     }
 }
