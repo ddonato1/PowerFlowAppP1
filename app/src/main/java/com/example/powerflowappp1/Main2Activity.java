@@ -36,7 +36,7 @@ public class Main2Activity extends AppCompatActivity {
         Intent intent = getIntent();
     }
 
-    public void saveButton_1(View view){
+    /*public void saveButton_1(View view){
         String voltages1 = volNum1.getText().toString();
 
         Toast.makeText(this, "Your answer has been saved: " +voltages1, Toast.LENGTH_SHORT).show();
@@ -59,10 +59,23 @@ public class Main2Activity extends AppCompatActivity {
         int iterNUMF = Integer.parseInt(iterations);
 
         Toast.makeText(this, "Your answer has been saved: " +iterNUMF, Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
-    private void moveNext(){
+    /*private void moveNext(){
         Intent intent = new Intent(Main2Activity.this, Part3of3buses.class);
+        startActivity(intent);
+    }*/
+    private void moveNext(){
+        String voltages1 = volNum1.getText().toString();
+        String voltages2 = volNum2.getText().toString();
+        String voltages3 = volNum3.getText().toString();
+        String iterations = iterNum.getText().toString();
+        //int iterNUMF = Integer.parseInt(iterations);
+        Intent intent = new Intent(Main2Activity.this, Part4_1.class);
+        intent.putExtra("Voltage 1: ", voltages1);
+        intent.putExtra("Voltage 2: ", voltages2);
+        intent.putExtra("Voltage 3: ", voltages3);
+        intent.putExtra("Iterations: ", iterations);
         startActivity(intent);
     }
 }
