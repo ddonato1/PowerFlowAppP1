@@ -31,6 +31,6 @@ public class Part4_1 extends AppCompatActivity {
         String iteration = getIntent().getStringExtra("Iterations: ");
 
         mresultTV.setText("Voltage 1: " +voltages1 +"\nVoltage 2: " +voltages2 +"\nVoltage 3: " +voltages3
-                +"\nVoltage 4: " +voltages4 +"\nIterations: " +iter);
+                +"\nVoltage 4: " +voltages4 +"\nIterations: " +iteration);
     }
 }
