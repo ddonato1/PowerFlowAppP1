@@ -40,44 +40,55 @@ public class Main4Activity extends AppCompatActivity {
         Intent intent = getIntent();
     }
 
-    public void Savebutton_1(View view){
+//    public void Savebutton_1(View view){
+//        String voltages1 = volNum1.getText().toString();
+//
+//        Toast.makeText(this, "Your answer has been saved: " +voltages1, Toast.LENGTH_SHORT).show();
+//    }
+//
+//    public void Savebutton_2(View view){
+//        String voltages2 = volNum2.getText().toString();
+//
+//        Toast.makeText(this, "Your answer has been saved: " +voltages2, Toast.LENGTH_SHORT).show();
+//    }
+//
+//    public void Savebutton_3(View view){
+//        String voltages3 = volNum3.getText().toString();
+//
+//        Toast.makeText(this, "Your answer has been saved: " +voltages3, Toast.LENGTH_SHORT).show();
+//    }
+//
+//    public void Savebutton_4(View view){
+//        String voltages4 = volNum4.getText().toString();
+//
+//        Toast.makeText(this, "Your answer has been saved: " +voltages4, Toast.LENGTH_SHORT).show();
+//    }
+//
+//    public void Savebutton_5(View view){
+//        String voltages5 = volNum5.getText().toString();
+//
+//        Toast.makeText(this, "Your answer has been saved: " +voltages5, Toast.LENGTH_SHORT).show();
+//    }
+//
+//    public void Savebutton_6(View view){
+//        String iterations = iterNUM.getText().toString();
+//        int iterNUMF = Integer.parseInt(iterations);
+//
+//        Toast.makeText(this, "Your answer has been saved: " +iterNUMF, Toast.LENGTH_SHORT).show();
+//    }
+
+    private void moveNextB(){
         String voltages1 = volNum1.getText().toString();
-
-        Toast.makeText(this, "Your answer has been saved: " +voltages1, Toast.LENGTH_SHORT).show();
-    }
-
-    public void Savebutton_2(View view){
         String voltages2 = volNum2.getText().toString();
-
-        Toast.makeText(this, "Your answer has been saved: " +voltages2, Toast.LENGTH_SHORT).show();
-    }
-
-    public void Savebutton_3(View view){
         String voltages3 = volNum3.getText().toString();
-
-        Toast.makeText(this, "Your answer has been saved: " +voltages3, Toast.LENGTH_SHORT).show();
-    }
-
-    public void Savebutton_4(View view){
         String voltages4 = volNum4.getText().toString();
-
-        Toast.makeText(this, "Your answer has been saved: " +voltages4, Toast.LENGTH_SHORT).show();
-    }
-
-    public void Savebutton_5(View view){
         String voltages5 = volNum5.getText().toString();
 
-        Toast.makeText(this, "Your answer has been saved: " +voltages5, Toast.LENGTH_SHORT).show();
-    }
-
-    public void Savebutton_6(View view){
         String iterations = iterNUM.getText().toString();
         int iterNUMF = Integer.parseInt(iterations);
 
-        Toast.makeText(this, "Your answer has been saved: " +iterNUMF, Toast.LENGTH_SHORT).show();
-    }
+        Toast.makeText(this, "Your answer has been saved: " , Toast.LENGTH_SHORT).show();
 
-    private void moveNextB(){
         Intent intent = new Intent(Main4Activity.this, Part3of5buses.class);
         startActivity(intent);
     }
