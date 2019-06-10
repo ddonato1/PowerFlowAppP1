@@ -29,7 +29,7 @@ public class Part3of6buses extends AppCompatActivity {
         ang5 = findViewById(R.id.angulo5);
         ang6 = findViewById(R.id.angulo6);
 
-        moveNextButA = findViewById(R.id.nextButP3);
+        moveNextButA = findViewById(R.id.nextB);
         moveNextButA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
