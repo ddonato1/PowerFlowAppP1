@@ -31,7 +31,7 @@ public class Part4_1 extends AppCompatActivity {
 
         TextView mresultTV = findViewById(R.id.resultTV);
 
-        mresultTV.setText("Voltage 1: " +voltage1 +"\nVoltage 2: " +voltage2 +"\nVoltage 3: " +voltage3
+        mresultTV.setText("Voltage 1: " +voltage1 +"\nVoltage 2: " +voltage2 +"\nVoltage 3:2 " +voltage3
                 +"\nIterations: " +iter);
 
         Intent intent2 = getIntent();
