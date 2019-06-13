@@ -6,14 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Part3of3buses extends AppCompatActivity {
-
     EditText angNum1;
     EditText angNum2;
     EditText angNum3;
     private Button moveNext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +35,7 @@ public class Part3of3buses extends AppCompatActivity {
         Intent intent = getIntent();
     }
 
-    public void saveButton_1(View view){
+    /*public void saveButton_1(View view){
         String angle1 = angNum1.getText().toString();
 
         Toast.makeText(this, "Your answer has been saved: " +angle1, Toast.LENGTH_SHORT).show();
@@ -50,11 +51,11 @@ public class Part3of3buses extends AppCompatActivity {
         String angle3 = angNum3.getText().toString();
 
         Toast.makeText(this, "Your answer has been saved: " +angle3, Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
     private void moveNext(){
-        Intent intent = new Intent(Part3of3buses.this, Part4_3buses.class);
-        startActivity(intent);
+        Intent intent_1 = new Intent(Part3of3buses.this, Part4_3buses.class);
+        startActivity(intent_1);
     }
 
 
