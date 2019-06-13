@@ -26,15 +26,13 @@ public class Part4_1 extends AppCompatActivity {
         });
 
         Intent intent1 = getIntent();
-        String voltage1 = getIntent().getStringExtra("Voltage 1: ");
-        String voltage2 = getIntent().getStringExtra("Voltage 2: ");
-        String voltage3 = getIntent().getStringExtra("Voltage 3: ");
+        String voltages1 = getIntent().getStringExtra("Voltage 1: ");
+        String voltages2 = getIntent().getStringExtra("Voltage 2: ");
+        String voltages3 = getIntent().getStringExtra("Voltage 3: ");
         String iter = getIntent().getStringExtra("Iterations: ");
-        Intent intent_1 = getIntent();
         String angles1 = getIntent().getStringExtra("Angle 1: ");
         String angles2 = getIntent().getStringExtra("Angle 2: ");
         String angles3 = getIntent().getStringExtra("Angle 3: ");
-        Intent intent1_1 = getIntent();
         String zbus11 = getIntent().getStringExtra("Zbus 11: ");
         String zbus12 = getIntent().getStringExtra("Zbus 12: ");
         String zbus13 = getIntent().getStringExtra("Zbus 13: ");
@@ -48,7 +46,7 @@ public class Part4_1 extends AppCompatActivity {
 
         TextView mresultTV = findViewById(R.id.resultTV);
 
-        mresultTV.setText("Voltages: \n" +voltage1 +"\n" +voltage2 +"\n" +voltage3
+        mresultTV.setText("Voltages: \n" +voltages1 +"\n" +voltages2 +"\n" +voltages3
                 +"\nIterations: " +iter +"\nAngles: \n" +angles1 +"\n" +angles2 +"\n" +angles3
                 +"\nZbuses: \n" +zbus11 +"\n" +zbus12 +"\n" +zbus13 +"\n" +zbus21 +"\n" +zbus22
                 +"\n" +zbus23 +"\n" +zbus31 +"\n" +zbus32 +"\n" +zbus33);

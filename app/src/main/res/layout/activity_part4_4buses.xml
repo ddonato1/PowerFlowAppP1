@@ -33,11 +33,29 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView21"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="78dp"
+            android:layout_marginLeft="78dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="66dp"
+            android:layout_marginRight="66dp"
+            android:text="Enter the voltage that you have:"
+            android:textColor="#009688"
+            android:textSize="18sp" />
+
         <EditText
             android:id="@+id/volt_1"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/textView21"
+            android:layout_below="@+id/textView11"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -53,7 +71,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.085"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <EditText
             android:id="@+id/volt_2"
@@ -121,12 +139,29 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/volt_3" />
 
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="249dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/volt_4"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="93dp"
+            android:layout_marginLeft="93dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="69dp"
+            android:layout_marginRight="69dp"
+            android:text="Enter the number of iterations:"
+            android:textColor="#009688"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/num_Iter"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/volt_4"
+            android:layout_below="@+id/textView27"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -142,13 +177,31 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.085"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/num_Iter"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="112dp"
+            android:layout_marginLeft="112dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="112dp"
+            android:layout_marginRight="112dp"
+            android:text="Enter the angles given:"
+            android:textColor="#009688"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/Angle1"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/num_Iter"
+            android:layout_below="@+id/textView7"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -216,11 +269,29 @@
             android:hint="Angle bar 4"
             android:inputType="textPersonName" />
 
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="228dp"
+            android:layout_height="24dp"
+            android:layout_below="@+id/Angulo4"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="106dp"
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="78dp"
+            android:layout_marginRight="78dp"
+            android:text="Enter the z values given:"
+            android:textColor="#009688"
+            android:textSize="18sp" />
+
         <EditText
             android:id="@+id/Z11"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/Angle4"
+            android:layout_below="@+id/textView18"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"

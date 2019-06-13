@@ -8,7 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class Part4_3buses extends AppCompatActivity {
-
+    EditText volNum1;
+    EditText volNum2;
+    EditText volNum3;
+    EditText iterNum;
+    EditText angNum1;
+    EditText angNum2;
+    EditText angNum3;
     EditText zbus_11;
     EditText zbus_12;
     EditText zbus_13;
@@ -23,6 +29,13 @@ public class Part4_3buses extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_part4_3buses);
 
+        volNum1 = findViewById(R.id.volt1);
+        volNum2 = findViewById(R.id.volt2);
+        volNum3 = findViewById(R.id.volt3);
+        iterNum = findViewById(R.id.numIter);
+        angNum1 = findViewById(R.id.angle1);
+        angNum2 = findViewById(R.id.angle2);
+        angNum3 = findViewById(R.id.angle3);
         zbus_11 = findViewById(R.id.z11);
         zbus_12 = findViewById(R.id.z12);
         zbus_13 = findViewById(R.id.z13);
@@ -44,7 +57,13 @@ public class Part4_3buses extends AppCompatActivity {
     private void nextButtonZ(){
         //Intent intent = new Intent(Part4_3buses.this, Part4_1.class);
         //startActivity(intent);
-
+        String voltages1 = volNum1.getText().toString();
+        String voltages2 = volNum2.getText().toString();
+        String voltages3 = volNum3.getText().toString();
+        String iterations = iterNum.getText().toString();
+        String angles1 = angNum1.getText().toString();
+        String angles2 = angNum2.getText().toString();
+        String angles3 = angNum3.getText().toString();
         String zbus11 = zbus_11.getText().toString();
         String zbus12 = zbus_12.getText().toString();
         String zbus13 = zbus_13.getText().toString();
@@ -56,17 +75,24 @@ public class Part4_3buses extends AppCompatActivity {
         String zbus33 = zbus_33.getText().toString();
 
 
-        Intent intent1_1 = new Intent(Part4_3buses.this, Part4_1.class);
+        Intent intent = new Intent(Part4_3buses.this, Part4_1.class);
 
-        intent1_1.putExtra("Zbus 11: ", zbus11);
-        intent1_1.putExtra("Zbus 12: ", zbus12);
-        intent1_1.putExtra("Zbus 13: ", zbus13);
-        intent1_1.putExtra("Zbus 21: ", zbus21);
-        intent1_1.putExtra("Zbus 22: ", zbus22);
-        intent1_1.putExtra("Zbus 23: ", zbus23);
-        intent1_1.putExtra("Zbus 31: ", zbus31);
-        intent1_1.putExtra("Zbus 32: ", zbus32);
-        intent1_1.putExtra("Zbus 33: ", zbus33);
-        startActivity(intent1_1);
+        intent.putExtra("Voltage 1:", voltages1);
+        intent.putExtra("Voltage 3:", voltages2);
+        intent.putExtra("Voltage 4:", voltages3);
+        intent.putExtra("Iterations:", iterations);
+        intent.putExtra("Angle 1:", angles1);
+        intent.putExtra("Angle 3:", angles2);
+        intent.putExtra("Angle 4:", angles3);
+        intent.putExtra("Zbus 11: ", zbus11);
+        intent.putExtra("Zbus 12: ", zbus12);
+        intent.putExtra("Zbus 13: ", zbus13);
+        intent.putExtra("Zbus 21: ", zbus21);
+        intent.putExtra("Zbus 22: ", zbus22);
+        intent.putExtra("Zbus 23: ", zbus23);
+        intent.putExtra("Zbus 31: ", zbus31);
+        intent.putExtra("Zbus 32: ", zbus32);
+        intent.putExtra("Zbus 33: ", zbus33);
+        startActivity(intent);
     }
 }
