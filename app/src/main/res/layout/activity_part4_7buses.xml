@@ -12,19 +12,19 @@
 
         <TextView
             android:id="@+id/textView17"
-            android:layout_width="wrap_content"
+            android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="181dp"
-            android:layout_marginLeft="181dp"
+            android:layout_marginStart="133dp"
+            android:layout_marginLeft="133dp"
             android:layout_marginTop="28dp"
-            android:layout_marginEnd="180dp"
-            android:layout_marginRight="180dp"
-            android:text="Part 4"
+            android:layout_marginEnd="102dp"
+            android:layout_marginRight="102dp"
+            android:text="Enter your inputs:"
             android:textColor="#4CAF50"
             android:textSize="18sp" />
 
