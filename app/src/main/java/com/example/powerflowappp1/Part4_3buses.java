@@ -32,7 +32,7 @@ public class Part4_3buses extends AppCompatActivity {
         volNum1 = findViewById(R.id.volt1);
         volNum2 = findViewById(R.id.volt2);
         volNum3 = findViewById(R.id.volt3);
-        iterNum = findViewById(R.id.numIter);
+        iterNum = findViewById(R.id.NUMIter);
         angNum1 = findViewById(R.id.angle1);
         angNum2 = findViewById(R.id.angle2);
         angNum3 = findViewById(R.id.angle3);
