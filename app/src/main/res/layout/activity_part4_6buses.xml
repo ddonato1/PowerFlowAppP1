@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1750dp">
+        android:layout_height="2700dp">
 
         <TextView
             android:id="@+id/textView11"
