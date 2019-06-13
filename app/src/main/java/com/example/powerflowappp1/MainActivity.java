@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button movButton1;
@@ -63,27 +61,27 @@ public class MainActivity extends AppCompatActivity {
     }
     // 3 buses
     private void moveButton1(){
-        Intent intent = new Intent(MainActivity.this, Part4_3buses.class);
+        Intent intent = new Intent(MainActivity.this, Input_3buses.class);
         startActivity(intent);
     }
     //4 buses
     private void moveButton2(){
-        Intent intent = new Intent(MainActivity.this, Part4_4buses.class);
+        Intent intent = new Intent(MainActivity.this, Input_4buses.class);
         startActivity(intent);
     }
     //5 buses
     private void moveButton3(){
-        Intent intent = new Intent(MainActivity.this, Part4_5buses.class);
+        Intent intent = new Intent(MainActivity.this, Input_5buses.class);
         startActivity(intent);
     }
     //6 buses
     private void moveButton4(){
-        Intent intent = new Intent(MainActivity.this, Part4_6buses.class);
+        Intent intent = new Intent(MainActivity.this, Input_6buses.class);
         startActivity(intent);
     }
     //7 buses
     private void moveButton5(){
-        Intent intent = new Intent(MainActivity.this, Part4_7buses.class);
+        Intent intent = new Intent(MainActivity.this, Input_7buses.class);
         startActivity(intent);
     }
 }

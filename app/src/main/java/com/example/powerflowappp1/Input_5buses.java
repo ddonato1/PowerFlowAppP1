@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Part4_5buses extends AppCompatActivity {
+public class Input_5buses extends AppCompatActivity {
     EditText zbus_11;
     EditText zbus_12;
     EditText zbus_13;
@@ -29,7 +29,7 @@ public class Part4_5buses extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_Input5buses);
+        setContentView(R.layout.activity_input5buses);
 
         zbus_11 = findViewById(R.id.zbus11);
         zbus_12 = findViewById(R.id.zbus12);
@@ -59,7 +59,7 @@ public class Part4_5buses extends AppCompatActivity {
     }
 
     private void nextButtonZ(){
-        Intent intent = new Intent(Part4_5buses.this, Part4_1.class);
+        Intent intent = new Intent(Input_5buses.this, Part4_1.class);
         startActivity(intent);
     }
 }

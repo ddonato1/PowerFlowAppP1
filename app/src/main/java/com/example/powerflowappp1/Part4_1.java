@@ -1,5 +1,6 @@
 package com.example.powerflowappp1;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 public class Part4_1 extends AppCompatActivity {
     private Button nextBUTTON;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

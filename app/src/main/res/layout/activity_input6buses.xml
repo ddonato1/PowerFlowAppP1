@@ -4,33 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Part4_5buses">
+    tools:context=".Input_6buses">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="2050dp">
-
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="148dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="136dp"
-            android:layout_marginLeft="136dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="127dp"
-            android:layout_marginRight="127dp"
-            android:text="Enter your inputs:"
-            android:textColor="#4CAF50"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="2850dp">
 
         <TextView
             android:id="@+id/textView11"
@@ -41,61 +19,54 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="78dp"
-            android:layout_marginLeft="78dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginLeft="76dp"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="66dp"
-            android:layout_marginRight="66dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="70dp"
             android:text="Enter the voltage that you have:"
             android:textColor="#009688"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/Voltage1slack"
+            android:id="@+id/volta1"
             android:layout_width="115dp"
             android:layout_height="48dp"
             android:layout_below="@+id/textView11"
-            android:layout_marginStart="148dp"
-            android:layout_marginLeft="34dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="148dp"
-            android:layout_marginRight="262dp"
-            android:ems="10"
-            android:hint="Voltage slack"
-            android:inputType="textPersonName"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.089"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-        <EditText
-            android:id="@+id/Voltage2"
-            android:layout_width="115dp"
-            android:layout_height="48dp"
-            android:layout_below="@+id/Voltage1slack"
-            android:layout_marginStart="148dp"
-            android:layout_marginLeft="34dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="148dp"
-            android:layout_marginRight="262dp"
-            android:ems="10"
-            android:hint="Voltage bar 2"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.089"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Voltage1slack" />
-
-        <EditText
-            android:id="@+id/Voltage3"
-            android:layout_width="115dp"
-            android:layout_height="48dp"
-            android:layout_below="@+id/Voltage2"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Voltage slack"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/volta2"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/volta1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Voltage bar 2"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/volta3"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/volta2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_marginStart="148dp"
             android:layout_marginLeft="148dp"
             android:layout_marginTop="24dp"
@@ -103,21 +74,15 @@
             android:layout_marginRight="148dp"
             android:ems="10"
             android:hint="Voltage bar 3"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.089"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Voltage2" />
+            android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/Voltage4"
+            android:id="@+id/volta4"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/Voltage3"
+            android:layout_below="@+id/volta3"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_marginStart="148dp"
             android:layout_marginLeft="148dp"
             android:layout_marginTop="24dp"
@@ -125,39 +90,45 @@
             android:layout_marginRight="148dp"
             android:ems="10"
             android:hint="Voltage bar 4"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.089"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Voltage3" />
+            android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/Voltage5"
+            android:id="@+id/volta5"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/Voltage4"
+            android:layout_below="@+id/volta4"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_marginStart="148dp"
-            android:layout_marginLeft="34dp"
+            android:layout_marginLeft="148dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="148dp"
-            android:layout_marginRight="262dp"
+            android:layout_marginRight="148dp"
             android:ems="10"
             android:hint="Voltage bar 5"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.089"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Voltage4" />
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/volta6"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/volta5"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Voltage bar 6"
+            android:inputType="textPersonName" />
 
         <TextView
             android:id="@+id/textView27"
             android:layout_width="249dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Voltage5"
+            android:layout_below="@+id/volta6"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -172,7 +143,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/iterNUM1"
+            android:id="@+id/iternum1"
             android:layout_width="115dp"
             android:layout_height="48dp"
             android:layout_below="@+id/textView27"
@@ -195,9 +166,9 @@
 
         <TextView
             android:id="@+id/textView7"
-            android:layout_width="115dp"
-            android:layout_height="38dp"
-            android:layout_below="@+id/iterNUM1"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iternum1"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -212,34 +183,30 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/Angulo1"
+            android:id="@+id/angulo1"
             android:layout_width="115dp"
             android:layout_height="48dp"
             android:layout_below="@+id/textView7"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_marginStart="148dp"
-            android:layout_marginLeft="34dp"
+            android:layout_marginLeft="148dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="148dp"
             android:layout_marginRight="148dp"
             android:ems="10"
-            android:hint="Angle  slack"
+            android:hint="Angle slack"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/Angulo2"
+            android:id="@+id/angulo2"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/Angulo1"
+            android:layout_below="@+id/angulo1"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_marginStart="148dp"
-            android:layout_marginLeft="34dp"
+            android:layout_marginLeft="148dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="148dp"
             android:layout_marginRight="148dp"
@@ -248,16 +215,14 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/Angulo3"
+            android:id="@+id/angulo3"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/Angulo2"
+            android:layout_below="@+id/angulo2"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_marginStart="148dp"
-            android:layout_marginLeft="34dp"
+            android:layout_marginLeft="148dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="148dp"
             android:layout_marginRight="148dp"
@@ -266,34 +231,30 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/Angulo4"
+            android:id="@+id/angulo4"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/Angulo3"
+            android:layout_below="@+id/angulo3"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_marginStart="148dp"
-            android:layout_marginLeft="34dp"
+            android:layout_marginLeft="148dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="148dp"
             android:layout_marginRight="148dp"
             android:ems="10"
-            android:hint="Angle bar 4"
+            android:hint="Angel bar 4"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/Angulo5"
+            android:id="@+id/angulo5"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/Angulo4"
+            android:layout_below="@+id/angulo4"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_marginStart="148dp"
-            android:layout_marginLeft="34dp"
+            android:layout_marginLeft="148dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="148dp"
             android:layout_marginRight="148dp"
@@ -301,11 +262,46 @@
             android:hint="Angle bar 5"
             android:inputType="textPersonName" />
 
+        <EditText
+            android:id="@+id/angulo6"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/angulo5"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Angle bar 6"
+            android:inputType="textPersonName" />
+
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="132dp"
+            android:layout_marginLeft="132dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="127dp"
+            android:layout_marginRight="127dp"
+            android:text="Enter your inputs:"
+            android:textColor="#4CAF50"
+            android:textSize="18sp" />
+
         <TextView
             android:id="@+id/textView18"
-            android:layout_width="115dp"
-            android:layout_height="38dp"
-            android:layout_below="@+id/Angulo5"
+            android:layout_width="228dp"
+            android:layout_height="24dp"
+            android:layout_below="@+id/angulo6"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -320,7 +316,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/zbus11"
+            android:id="@+id/Zbus11"
             android:layout_width="115dp"
             android:layout_height="48dp"
             android:layout_below="@+id/textView18"
@@ -329,19 +325,19 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginStart="148dp"
-            android:layout_marginLeft="34dp"
+            android:layout_marginLeft="148dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="148dp"
-            android:layout_marginRight="262dp"
+            android:layout_marginRight="148dp"
             android:ems="10"
             android:hint="Z11"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus12"
+            android:id="@+id/Zbus12"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus11"
+            android:layout_below="@+id/Zbus11"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -356,10 +352,10 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus13"
+            android:id="@+id/Zbus13"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus12"
+            android:layout_below="@+id/Zbus12"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -374,10 +370,10 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus14"
+            android:id="@+id/Zbus14"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus13"
+            android:layout_below="@+id/Zbus13"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -392,10 +388,10 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus15"
+            android:id="@+id/Zbus15"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus14"
+            android:layout_below="@+id/Zbus14"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -410,10 +406,28 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus22"
+            android:id="@+id/Zbus16"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus15"
+            android:layout_below="@+id/Zbus15"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="262dp"
+            android:ems="10"
+            android:hint="Z16"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/Zbus22"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/Zbus16"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -428,10 +442,10 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus23"
+            android:id="@+id/Zbus23"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus22"
+            android:layout_below="@+id/Zbus22"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -446,10 +460,10 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus24"
+            android:id="@+id/Zbus24"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus23"
+            android:layout_below="@+id/Zbus23"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -464,10 +478,10 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus25"
+            android:id="@+id/Zbus25"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus24"
+            android:layout_below="@+id/Zbus24"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -482,10 +496,28 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus33"
+            android:id="@+id/Zbus26"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus25"
+            android:layout_below="@+id/Zbus25"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="262dp"
+            android:ems="10"
+            android:hint="Z26"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/Zbus33"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/Zbus26"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -500,10 +532,10 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus34"
+            android:id="@+id/Zbus34"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus33"
+            android:layout_below="@+id/Zbus33"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -518,10 +550,10 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus35"
+            android:id="@+id/Zbus35"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus34"
+            android:layout_below="@+id/Zbus34"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -536,10 +568,28 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus44"
+            android:id="@+id/Zbus36"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus35"
+            android:layout_below="@+id/Zbus35"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="262dp"
+            android:ems="10"
+            android:hint="Z36"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/Zbus44"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/Zbus36"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -554,10 +604,10 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus45"
+            android:id="@+id/Zbus45"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus44"
+            android:layout_below="@+id/Zbus44"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -572,10 +622,28 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/zbus55"
+            android:id="@+id/Zbus46"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/zbus45"
+            android:layout_below="@+id/Zbus45"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="262dp"
+            android:ems="10"
+            android:hint="Z46"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/Zbus55"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/Zbus46"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -589,11 +657,47 @@
             android:hint="Z55"
             android:inputType="textPersonName" />
 
+        <EditText
+            android:id="@+id/Zbus56"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/Zbus55"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="262dp"
+            android:ems="10"
+            android:hint="Z56"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/Zbus66"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/Zbus56"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="262dp"
+            android:ems="10"
+            android:hint="Z66"
+            android:inputType="textPersonName" />
+
         <Button
-            android:id="@+id/nextbZ"
+            android:id="@+id/nextButtonZ"
             android:layout_width="81dp"
             android:layout_height="38dp"
-            android:layout_below="@+id/zbus55"
+            android:layout_below="@+id/Zbus66"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -604,7 +708,6 @@
             android:layout_marginEnd="162dp"
             android:layout_marginRight="162dp"
             android:background="#00BCD4"
-            android:onClick="nextButtonZ"
             android:text="Next" />
     </RelativeLayout>
 

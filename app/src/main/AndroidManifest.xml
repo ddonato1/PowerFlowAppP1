@@ -10,11 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Functions"></activity>
-        <activity android:name=".Part4_7buses" />
-        <activity android:name=".Part4_6buses" />
-        <activity android:name=".Part4_5buses" />
-        <activity android:name=".Part4_4buses" />
-        <activity android:name=".Part4_3buses" />
+        <activity android:name=".Input_7buses" />
+        <activity android:name=".Input_6buses" />
+        <activity android:name=".Input_5buses" />
+        <activity android:name=".Input_4buses" />
+        <activity android:name=".Input_3buses" />
         <activity android:name=".Part4_1" />
         <activity android:name=".MainActivity">
             <intent-filter>

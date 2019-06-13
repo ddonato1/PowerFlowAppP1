@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Part4_3buses extends AppCompatActivity {
+public class Input_3buses extends AppCompatActivity {
     EditText volNum1;
     EditText volNum2;
     EditText volNum3;
@@ -27,7 +27,7 @@ public class Part4_3buses extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_Input3buses);
+        setContentView(R.layout.activity_input3buses);
 
         volNum1 = findViewById(R.id.volt1);
         volNum2 = findViewById(R.id.volt2);
@@ -55,7 +55,7 @@ public class Part4_3buses extends AppCompatActivity {
     }
 
     private void nextButtonZ(){
-        //Intent intent = new Intent(Part4_3buses.this, Part4_1.class);
+        //Intent intent = new Intent(Input_3buses.this, Part4_1.class);
         //startActivity(intent);
         String voltages1 = volNum1.getText().toString();
         String voltages2 = volNum2.getText().toString();
@@ -75,7 +75,7 @@ public class Part4_3buses extends AppCompatActivity {
         String zbus33 = zbus_33.getText().toString();
 
 
-        Intent intent = new Intent(Part4_3buses.this, Part4_1.class);
+        Intent intent = new Intent(Input_3buses.this, Part4_1.class);
 
         intent.putExtra("Voltage 1:", voltages1);
         intent.putExtra("Voltage 3:", voltages2);
