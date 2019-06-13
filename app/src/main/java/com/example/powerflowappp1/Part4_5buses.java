@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class Part4_5buses extends AppCompatActivity {
     EditText zbus_11;
@@ -30,7 +29,7 @@ public class Part4_5buses extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_part4_5buses);
+        setContentView(R.layout.activity_Input5buses);
 
         zbus_11 = findViewById(R.id.zbus11);
         zbus_12 = findViewById(R.id.zbus12);

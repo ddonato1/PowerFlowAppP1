@@ -25,7 +25,7 @@ public class Part4_4buses extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_part4_4buses);
+        setContentView(R.layout.activity_Input4buses);
 
         zbus_11 = findViewById(R.id.Z11);
         zbus_12 = findViewById(R.id.Z12);

@@ -27,7 +27,7 @@ public class Part4_3buses extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_part4_3buses);
+        setContentView(R.layout.activity_Input3buses);
 
         volNum1 = findViewById(R.id.volt1);
         volNum2 = findViewById(R.id.volt2);
