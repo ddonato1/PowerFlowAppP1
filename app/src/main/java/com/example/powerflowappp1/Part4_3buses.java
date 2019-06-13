@@ -42,7 +42,31 @@ public class Part4_3buses extends AppCompatActivity {
     }
 
     private void nextButtonZ(){
-        Intent intent = new Intent(Part4_3buses.this, Part4_1.class);
-        startActivity(intent);
+        //Intent intent = new Intent(Part4_3buses.this, Part4_1.class);
+        //startActivity(intent);
+
+        String zbus11 = zbus_11.getText().toString();
+        String zbus12 = zbus_12.getText().toString();
+        String zbus13 = zbus_13.getText().toString();
+        String zbus21 = zbus_12.getText().toString();
+        String zbus22 = zbus_22.getText().toString();
+        String zbus23 = zbus_23.getText().toString();
+        String zbus31 = zbus_13.getText().toString();
+        String zbus32 = zbus_23.getText().toString();
+        String zbus33 = zbus_33.getText().toString();
+
+
+        Intent intent1_1 = new Intent(Part4_3buses.this, Part4_1.class);
+
+        intent1_1.putExtra("Zbus 11: ", zbus11);
+        intent1_1.putExtra("Zbus 12: ", zbus12);
+        intent1_1.putExtra("Zbus 13: ", zbus13);
+        intent1_1.putExtra("Zbus 21: ", zbus21);
+        intent1_1.putExtra("Zbus 22: ", zbus22);
+        intent1_1.putExtra("Zbus 23: ", zbus23);
+        intent1_1.putExtra("Zbus 31: ", zbus31);
+        intent1_1.putExtra("Zbus 32: ", zbus32);
+        intent1_1.putExtra("Zbus 33: ", zbus33);
+        startActivity(intent1_1);
     }
 }

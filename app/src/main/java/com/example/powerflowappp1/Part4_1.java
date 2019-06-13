@@ -1,6 +1,8 @@
 package com.example.powerflowappp1;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,18 +25,35 @@ public class Part4_1 extends AppCompatActivity {
             }
         });
 
-        Intent intent = getIntent();
+        Intent intent1 = getIntent();
         String voltage1 = getIntent().getStringExtra("Voltage 1: ");
         String voltage2 = getIntent().getStringExtra("Voltage 2: ");
         String voltage3 = getIntent().getStringExtra("Voltage 3: ");
         String iter = getIntent().getStringExtra("Iterations: ");
+        Intent intent_1 = getIntent();
+        String angles1 = getIntent().getStringExtra("Angle 1: ");
+        String angles2 = getIntent().getStringExtra("Angle 2: ");
+        String angles3 = getIntent().getStringExtra("Angle 3: ");
+        Intent intent1_1 = getIntent();
+        String zbus11 = getIntent().getStringExtra("Zbus 11: ");
+        String zbus12 = getIntent().getStringExtra("Zbus 12: ");
+        String zbus13 = getIntent().getStringExtra("Zbus 13: ");
+        String zbus21 = getIntent().getStringExtra("Zbus 21: ");
+        String zbus22 = getIntent().getStringExtra("Zbus 22: ");
+        String zbus23 = getIntent().getStringExtra("Zbus 23: ");
+        String zbus31 = getIntent().getStringExtra("Zbus 31: ");
+        String zbus32 = getIntent().getStringExtra("Zbus 32: ");
+        String zbus33 = getIntent().getStringExtra("Zbus 33: ");
+
 
         TextView mresultTV = findViewById(R.id.resultTV);
 
-        mresultTV.setText("Voltage 1: " +voltage1 +"\nVoltage 2: " +voltage2 +"\nVoltage 3:2 " +voltage3
-                +"\nIterations: " +iter);
+        mresultTV.setText("Voltages: \n" +voltage1 +"\n" +voltage2 +"\n" +voltage3
+                +"\nIterations: " +iter +"\nAngles: \n" +angles1 +"\n" +angles2 +"\n" +angles3
+                +"\nZbuses: \n" +zbus11 +"\n" +zbus12 +"\n" +zbus13 +"\n" +zbus21 +"\n" +zbus22
+                +"\n" +zbus23 +"\n" +zbus31 +"\n" +zbus32 +"\n" +zbus33);
 
-        Intent intent2 = getIntent();
+        /* Intent intent2 = getIntent();
         String voltages1 = getIntent().getStringExtra("");
         String voltages2 = getIntent().getStringExtra("");
         String voltages3 = getIntent().getStringExtra("");
@@ -43,8 +62,8 @@ public class Part4_1 extends AppCompatActivity {
 
         TextView mresultTv = findViewById(R.id.resultTV);
 
-        mresultTv.setText("Voltage 1: " +voltages1 +"\nVoltage 2: " +voltages2 +"\nVoltage 3: " +voltages3
-                +"\nVoltage 4: " +voltages4 +"\nIterations: " +iteration);
+        mresultTv.setText("Voltages: \n" +voltages1 +"\n" +voltages2 +"\n" +voltages3
+                +"\n" +voltages4 +"\nIterations: " +iteration);*/
     }
 
     private void nextBUTTON(){

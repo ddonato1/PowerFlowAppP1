@@ -63,17 +63,17 @@ public class MainActivity extends AppCompatActivity {
     }
     // 3 buses
     private void moveButton1(){
-        Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+        Intent intent = new Intent(MainActivity.this, Part4_3buses.class);
         startActivity(intent);
     }
     //4 buses
     private void moveButton2(){
-        Intent intent = new Intent(MainActivity.this, Main3Activity.class);
+        Intent intent = new Intent(MainActivity.this, Part4_4buses.class);
         startActivity(intent);
     }
     //5 buses
     private void moveButton3(){
-        Intent intent = new Intent(MainActivity.this, Main4Activity.class);
+        Intent intent = new Intent(MainActivity.this, Part4_5buses.class);
         startActivity(intent);
     }
     //6 buses
