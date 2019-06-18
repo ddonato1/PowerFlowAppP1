@@ -59,7 +59,7 @@ public class Input_5buses extends AppCompatActivity {
     }
 
     private void nextButtonZ(){
-        Intent intent = new Intent(Input_5buses.this, Part4_1.class);
+        Intent intent = new Intent(Input_5buses.this, Functions5buses.class);
         startActivity(intent);
     }
 }

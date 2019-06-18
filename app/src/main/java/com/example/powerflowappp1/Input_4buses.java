@@ -50,7 +50,7 @@ public class Input_4buses extends AppCompatActivity {
     }
 
     private void nextButtonZ(){
-        Intent intent = new Intent(Input_4buses.this, Part4_1.class);
+        Intent intent = new Intent(Input_4buses.this, Functions4buses.class);
         startActivity(intent);
     }
 }

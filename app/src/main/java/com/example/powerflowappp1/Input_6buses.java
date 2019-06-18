@@ -70,7 +70,7 @@ public class Input_6buses extends AppCompatActivity {
     }
 
     private void nextbuttonZ(){
-        Intent intent = new Intent(Input_6buses.this, Part4_1.class);
+        Intent intent = new Intent(Input_6buses.this, Functions6buses.class);
         startActivity(intent);
     }
 }

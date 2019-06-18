@@ -1,9 +1,7 @@
 package com.example.powerflowappp1;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -67,7 +65,7 @@ public class Part4_1 extends AppCompatActivity {
     }
 
     private void nextBUTTON(){
-        Intent intent = new Intent(Part4_1.this, MainActivity.class);
+        Intent intent = new Intent(Part4_1.this, Functions3buses.class);
         startActivity(intent);
     }
 }

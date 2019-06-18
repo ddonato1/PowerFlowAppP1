@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Functions"></activity>
+        <activity android:name=".Functions7buses"></activity>
+        <activity android:name=".Functions6buses" />
+        <activity android:name=".Functions5buses" />
+        <activity android:name=".Functions4buses" />
+        <activity android:name=".Functions3buses" />
         <activity android:name=".Input_7buses" />
         <activity android:name=".Input_6buses" />
         <activity android:name=".Input_5buses" />
