@@ -10,39 +10,43 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/resultTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="21dp"
-            android:textColor="#4CAF50"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <Button
             android:id="@+id/nextBUTTON"
             android:layout_width="81dp"
             android:layout_height="38dp"
-            android:layout_below="@+id/resultTV"
+            android:layout_below="@+id/displayInputs"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="6dp"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="57dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
             android:layout_marginBottom="8dp"
             android:background="#00BCD4"
             android:text="Next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/resultTV" />
+            app:layout_constraintTop_toBottomOf="@+id/displayInputs" />
+
+        <TextView
+            android:id="@+id/displayInputs"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="164dp"
+            android:layout_marginLeft="164dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="164dp"
+            android:layout_marginRight="164dp"
+            android:hint="Inputs"
+            android:textSize="24sp" />
     </RelativeLayout>
 </ScrollView>
