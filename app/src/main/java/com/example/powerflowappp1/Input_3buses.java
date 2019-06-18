@@ -47,8 +47,8 @@ public class Input_3buses extends AppCompatActivity{
         nextButtonZ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //nextButtonZ();
-                String voltages1 = volNum1.getText().toString();
+                nextButtonZ();
+                /*String voltages1 = volNum1.getText().toString();
                 String voltages2 = volNum2.getText().toString();
                 String voltages3 = volNum3.getText().toString();
                 String iterations = iterNum.getText().toString();
@@ -83,14 +83,14 @@ public class Input_3buses extends AppCompatActivity{
                 intent.putExtra("Zbus 31:", zbus31);
                 intent.putExtra("Zbus 32:", zbus32);
                 intent.putExtra("Zbus 33:", zbus33);
-                startActivity(intent);
+                startActivity(intent);*/
             }
         });
 
         Intent intent = getIntent();
     }
 
-    /*public void nextButtonZ(){
+    public void nextButtonZ(){
         //Intent intent = new Intent(Input_3buses.this, Part4_1.class);
         //startActivity(intent);
         String voltages1 = volNum1.getText().toString();
@@ -129,5 +129,5 @@ public class Input_3buses extends AppCompatActivity{
         intent.putExtra("Zbus 32:", zbus32);
         intent.putExtra("Zbus 33:", zbus33);
         startActivity(intent);
-    }*/
+    }
 }
