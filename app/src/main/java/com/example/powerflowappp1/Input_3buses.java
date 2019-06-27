@@ -48,42 +48,42 @@ public class Input_3buses extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 nextButtonZ();
-                /*String voltages1 = volNum1.getText().toString();
-                String voltages2 = volNum2.getText().toString();
-                String voltages3 = volNum3.getText().toString();
-                String iterations = iterNum.getText().toString();
-                String angles1 = angNum1.getText().toString();
-                String angles2 = angNum2.getText().toString();
-                String angles3 = angNum3.getText().toString();
-                String zbus11 = zbus_11.getText().toString();
-                String zbus12 = zbus_12.getText().toString();
-                String zbus13 = zbus_13.getText().toString();
-                String zbus21 = zbus_12.getText().toString();
-                String zbus22 = zbus_22.getText().toString();
-                String zbus23 = zbus_23.getText().toString();
-                String zbus31 = zbus_13.getText().toString();
-                String zbus32 = zbus_23.getText().toString();
-                String zbus33 = zbus_33.getText().toString();
-
-                Intent intent = new Intent(Input_3buses.this, Part4_1.class);
-
-                intent.putExtra("Voltage 1:", voltages1);
-                intent.putExtra("Voltage 2:", voltages2);
-                intent.putExtra("Voltage 3:", voltages3);
-                intent.putExtra("Iterations:", iterations);
-                intent.putExtra("Angle 1:", angles1);
-                intent.putExtra("Angle 2:", angles2);
-                intent.putExtra("Angle 3:", angles3);
-                intent.putExtra("Zbus 11:", zbus11);
-                intent.putExtra("Zbus 12:", zbus12);
-                intent.putExtra("Zbus 13:", zbus13);
-                intent.putExtra("Zbus 21:", zbus21);
-                intent.putExtra("Zbus 22:", zbus22);
-                intent.putExtra("Zbus 23:", zbus23);
-                intent.putExtra("Zbus 31:", zbus31);
-                intent.putExtra("Zbus 32:", zbus32);
-                intent.putExtra("Zbus 33:", zbus33);
-                startActivity(intent);*/
+//                String voltages1 = volNum1.getText().toString();
+//                String voltages2 = volNum2.getText().toString();
+//                String voltages3 = volNum3.getText().toString();
+//                String iterations = iterNum.getText().toString();
+//                String angles1 = angNum1.getText().toString();
+//                String angles2 = angNum2.getText().toString();
+//                String angles3 = angNum3.getText().toString();
+//                String zbus11 = zbus_11.getText().toString();
+//                String zbus12 = zbus_12.getText().toString();
+//                String zbus13 = zbus_13.getText().toString();
+//                String zbus21 = zbus_12.getText().toString();
+//                String zbus22 = zbus_22.getText().toString();
+//                String zbus23 = zbus_23.getText().toString();
+//                String zbus31 = zbus_13.getText().toString();
+//                String zbus32 = zbus_23.getText().toString();
+//                String zbus33 = zbus_33.getText().toString();
+//
+//                Intent intent = new Intent(Input_3buses.this, Part4_1.class);
+//
+//                intent.putExtra("Voltage 1:", voltages1);
+//                intent.putExtra("Voltage 2:", voltages2);
+//                intent.putExtra("Voltage 3:", voltages3);
+//                intent.putExtra("Iterations:", iterations);
+//                intent.putExtra("Angle 1:", angles1);
+//                intent.putExtra("Angle 2:", angles2);
+//                intent.putExtra("Angle 3:", angles3);
+//                intent.putExtra("Zbus 11:", zbus11);
+//                intent.putExtra("Zbus 12:", zbus12);
+//                intent.putExtra("Zbus 13:", zbus13);
+//                intent.putExtra("Zbus 21:", zbus21);
+//                intent.putExtra("Zbus 22:", zbus22);
+//                intent.putExtra("Zbus 23:", zbus23);
+//                intent.putExtra("Zbus 31:", zbus31);
+//                intent.putExtra("Zbus 32:", zbus32);
+//                intent.putExtra("Zbus 33:", zbus33);
+//                startActivity(intent);
             }
         });
 
@@ -91,8 +91,8 @@ public class Input_3buses extends AppCompatActivity{
     }
 
     public void nextButtonZ(){
-        //Intent intent = new Intent(Input_3buses.this, Part4_1.class);
-        //startActivity(intent);
+//        Intent intent = new Intent(Input_3buses.this, Part4_1.class);
+//        startActivity(intent);
         String voltages1 = volNum1.getText().toString();
         String voltages2 = volNum2.getText().toString();
         String voltages3 = volNum3.getText().toString();
