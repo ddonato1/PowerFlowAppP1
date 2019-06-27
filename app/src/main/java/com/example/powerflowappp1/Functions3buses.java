@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class Functions3buses extends AppCompatActivity {
 
-     EditText voltage1, voltage2, voltage3, voltage4, voltage5, voltage6, voltage7,
+     String voltage1, voltage2, voltage3, voltage4, voltage5, voltage6, voltage7,
             angleB1, angleB2,angleB3, angleB4, angleB5, angleB6, angleB7,
-            z11,z12,z13,z14,z15,z16,z17,z22,z23,z24,z25,z26,z27,z33,z34,z35,z36,z37, z44,z45,z46,z47,z55,z56,z57,z66,z67,z77;
+            z11,z12,z13,z14,z15,z16,z17,z22,z23,z24,z25,z26,z27,z33,z34,z35,z36,z37, z44,z45,z46,z47,z55,z56,z57,z66,z67,z77,
+            iter;
 
 
     @Override
@@ -19,41 +21,42 @@ public class Functions3buses extends AppCompatActivity {
 
         Intent intent = getIntent();
 
+        voltage1 = intent.getStringExtra("Voltage 1:");
+        voltage2 = intent.getStringExtra("Voltage 2:");
+        voltage3 = intent.getStringExtra("Voltage 3:");
+
+        angleB1 = intent.getStringExtra("Angle 1:");
+        angleB2 = intent.getStringExtra("Angle 2:");
+        angleB3 = intent.getStringExtra("Angle 3:");
+
+        z11 = intent.getStringExtra("z11:");
+        z12 = intent.getStringExtra("z12:");
+        z13 = intent.getStringExtra("z13:");
+        z22 = intent.getStringExtra("z22:");
+        z23 = intent.getStringExtra("z23:");
+        z33 = intent.getStringExtra("z33:");
+
+        iter = intent.getStringExtra("Iterations:");
+
+
+        TextView input = findViewById(R.id.displayMatrix3);
+        input.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3
+                +"\n\nIterations: " +iter +"\n\nAngles: \n" +angleB1 + "\n" +angleB2 + "\n"
+                +angleB3  + "\n\nZ Matrix: \n"+ z11 + " " + z12 + " " + z13 + "\n"+
+                z12+ " " +z22+ " " +z23+ "\n" +z13+ " " + z23 + " " + z33);
 
     }
+/*
+    public String[][] bar3MatrixFunction(){
 
-    public void bar3MatrixFunction(){
-        //input voltage value
-        voltage1 = findViewById(R.id.volt1);
-        voltage2 = findViewById(R.id.volt2);
-        voltage3 = findViewById(R.id.volt3);
-        int voltages1 = Integer.parseInt(voltage1.getText().toString());
-        int voltages2 = Integer.parseInt(voltage2.getText().toString());
-        int voltages3 = Integer.parseInt(voltage3.getText().toString());
+        Intent intent1 = getIntent();
 
-        //input angle value
-        angleB1 = findViewById(R.id.angle1);
-        angleB2 = findViewById(R.id.angle2);
-        angleB3 = findViewById(R.id.angle3);
-        int anglesB1 = Integer.parseInt(angleB1.getText().toString());
-        int anglesB2 = Integer.parseInt(angleB2.getText().toString());
-        int anglesB3 = Integer.parseInt(angleB3.getText().toString());
+//        //input voltage value
+//        voltage1 = intent1
 
-        //input z values
-        z11 = findViewById(R.id.z11);
-        z12 = findViewById(R.id.z12);
-        z13 = findViewById(R.id.z13);
-        z22 = findViewById(R.id.z22);
-        z23 = findViewById(R.id.z23);
-        z33 = findViewById(R.id.z33);
-        int z11A = Integer.parseInt(z11.getText().toString());
-        int z12A = Integer.parseInt(z12.getText().toString());
-        int z13A = Integer.parseInt(z13.getText().toString());
-        int z22A = Integer.parseInt(z22.getText().toString());
-        int z23A = Integer.parseInt(z23.getText().toString());
-        int z33A = Integer.parseInt(z33.getText().toString());
 
-        EditText zMatrix[][] = {
+
+        String zMatrix[][] = {
 //                new android.widget.EditText[3][3];
 //        zMatrix[0][0] = z11;
 //        zMatrix[0][1] = z12;
@@ -66,19 +69,19 @@ public class Functions3buses extends AppCompatActivity {
 //        zMatrix[2][2] = z33;
 //        System.out.print(zMatrix);
 
-                {z11, z12, z13},
-                {z12, z22, z23},
-                {z13, z23, z33},
 
         };
 
-        Intent resultIntent = new Intent();
-        resultIntent.putExtra("Z matrix: ", zMatrix);
 
-        setResult(RESULT_OK, resultIntent);
 
+//        System.out.print(zMatrix);
+//        resultIntent.putExtra("Z matrix: ", zMatrix);
+//
+//        setResult(RESULT_OK, resultIntent);
+
+        return zMatrix;
     }
-
+*/
 //    public void bar4MatrixFunction(){
 //        //input voltage vlaue
 //        voltage1 = findViewById(R.id.volt_1);
@@ -404,7 +407,7 @@ public class Functions3buses extends AppCompatActivity {
 //        };
 //    }
 
-    public void calcTheYMatrix(EditText zMatrix[][]){
+  /*  public void calcTheYMatrix(EditText zMatrix[][]){
 
 
 //        switch{
@@ -413,4 +416,4 @@ public class Functions3buses extends AppCompatActivity {
 //        }
     }
 
-}
+*/}
