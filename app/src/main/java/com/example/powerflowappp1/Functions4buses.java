@@ -32,6 +32,22 @@ public class Functions4buses extends AppCompatActivity {
     String angle3;
     String angle4;
     String[] myString;
+    String zbus44;
+    String zbus43;
+    String zbus42;
+    String zbus41;
+    String zbus34;
+    String zbus33;
+    String zbus32;
+    String zbus31;
+    String zbus24;
+    String zbus23;
+    String zbus22;
+    String zbus21;
+    String zbus14;
+    String zbus13;
+    String zbus12;
+    String zbus11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +64,31 @@ public class Functions4buses extends AppCompatActivity {
         angle2 = intent.getStringExtra("Angle 2:");
         angle3 = intent.getStringExtra("Angle 3:");
         angle4 = intent.getStringExtra("Angle 4:");
-        myString = intent.getStringArrayExtra("Matrix:");
+        zbus11 = intent.getStringExtra("Zbus 11:");
+        zbus12 = intent.getStringExtra("Zbus 12:");
+        zbus13 = intent.getStringExtra("Zbus 13:");
+        zbus14 = intent.getStringExtra("Zbus 14:");
+        zbus21 = intent.getStringExtra("Zbus 21:");
+        zbus22 = intent.getStringExtra("Zbus 22:");
+        zbus23 = intent.getStringExtra("Zbus 23:");
+        zbus24 = intent.getStringExtra("Zbus 24:");
+        zbus31 = intent.getStringExtra("Zbus 31:");
+        zbus32 = intent.getStringExtra("Zbus 32:");
+        zbus33 = intent.getStringExtra("Zbus 33:");
+        zbus34 = intent.getStringExtra("Zbus 34:");
+        zbus41 = intent.getStringExtra("Zbus 41:");
+        zbus42 = intent.getStringExtra("Zbus 42:");
+        zbus43 = intent.getStringExtra("Zbus 43:");
+        zbus44 = intent.getStringExtra("Zbus 44:");
+       // myString = intent.getStringArrayExtra("Matrix:");
 
 
         TextView mresultTV = findViewById(R.id.displayInputs);
         mresultTV.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3 +"\n" +voltage4
                 +"\n\nIterations: " +iterations +"\n\nAngles: \n" +angle1 + "\n" +angle2 + "\n"
-                +angle3 + "\n" +angle4 + "\n\nZ Matrix: \n" +myString);
+                +angle3 + "\n" +angle4 + "\n\nZ Matrix: \n" /*+myString*/ +zbus11 +zbus12 +zbus13
+                +zbus14 + "\n" +zbus21 +zbus22 +zbus23 +zbus24 + "\n" +zbus31 +zbus32 +zbus33 +zbus34
+                + "\n" +zbus41 +zbus42 +zbus43 +zbus44);
     }
 
 //    public void bar4MatrixFunction(){
@@ -138,6 +172,6 @@ public class Functions4buses extends AppCompatActivity {
 //    }
 
     public void calculateButton(){
-        
+
     }
 }

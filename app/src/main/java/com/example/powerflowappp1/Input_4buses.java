@@ -76,29 +76,29 @@ public class Input_4buses extends AppCompatActivity {
         String angles2 = angNum2.getText().toString();
         String angles3 = angNum3.getText().toString();
         String angles4 = angNum4.getText().toString();
-//        String zbus11 = zbus_11.getText().toString();
-//        String zbus12 = zbus_12.getText().toString();
-//        String zbus13 = zbus_13.getText().toString();
-//        String zbus14 = zbus_14.getText().toString();
-//        String zbus21 = zbus_12.getText().toString();
-//        String zbus22 = zbus_22.getText().toString();
-//        String zbus23 = zbus_23.getText().toString();
-//        String zbus24 = zbus_24.getText().toString();
-//        String zbus31 = zbus_13.getText().toString();
-//        String zbus32 = zbus_23.getText().toString();
-//        String zbus33 = zbus_33.getText().toString();
-//        String zbus34 = zbus_34.getText().toString();
-//        String zbus41 = zbus_14.getText().toString();
-//        String zbus42 = zbus_24.getText().toString();
-//        String zbus43 = zbus_34.getText().toString();
-//        String zbus44 = zbus_44.getText().toString();
+        String zbus11 = zbus_11.getText().toString();
+        String zbus12 = zbus_12.getText().toString();
+        String zbus13 = zbus_13.getText().toString();
+        String zbus14 = zbus_14.getText().toString();
+        String zbus21 = zbus_12.getText().toString();
+        String zbus22 = zbus_22.getText().toString();
+        String zbus23 = zbus_23.getText().toString();
+        String zbus24 = zbus_24.getText().toString();
+        String zbus31 = zbus_13.getText().toString();
+        String zbus32 = zbus_23.getText().toString();
+        String zbus33 = zbus_33.getText().toString();
+        String zbus34 = zbus_34.getText().toString();
+        String zbus41 = zbus_14.getText().toString();
+        String zbus42 = zbus_24.getText().toString();
+        String zbus43 = zbus_34.getText().toString();
+        String zbus44 = zbus_44.getText().toString();
 
-        String[][] myStrings = new String[][] {{zbus_11.getText().toString(), zbus_12.getText().toString(),
-                zbus_13.getText().toString(), zbus_14.getText().toString()}, {zbus_12.getText().toString(),
-                zbus_22.getText().toString(), zbus_23.getText().toString(), zbus_24.getText().toString()},
-                {zbus_13.getText().toString(), zbus_23.getText().toString(), zbus_33.getText().toString(),
-                zbus_34.getText().toString()}, {zbus_14.getText().toString(), zbus_24.getText().toString(),
-                zbus_34.getText().toString(), zbus_44.getText().toString()}};
+//        String[][] myStrings = new String[][] {{zbus_11.getText().toString(), zbus_12.getText().toString(),
+//                zbus_13.getText().toString(), zbus_14.getText().toString()}, {zbus_12.getText().toString(),
+//                zbus_22.getText().toString(), zbus_23.getText().toString(), zbus_24.getText().toString()},
+//                {zbus_13.getText().toString(), zbus_23.getText().toString(), zbus_33.getText().toString(),
+//                zbus_34.getText().toString()}, {zbus_14.getText().toString(), zbus_24.getText().toString(),
+//                zbus_34.getText().toString(), zbus_44.getText().toString()}};
 
         Intent intent = new Intent(Input_4buses.this, Functions4buses.class);
 
@@ -111,23 +111,23 @@ public class Input_4buses extends AppCompatActivity {
         intent.putExtra("Angle 2:", angles2);
         intent.putExtra("Angle 3:", angles3);
         intent.putExtra("Angle 4:", angles4);
-//        intent.putExtra("Zbus 11:", zbus11);
-//        intent.putExtra("Zbus 12:", zbus12);
-//        intent.putExtra("Zbus 13:", zbus13);
-//        intent.putExtra("Zbus 14:", zbus14);
-//        intent.putExtra("Zbus 21:", zbus21);
-//        intent.putExtra("Zbus 22:", zbus22);
-//        intent.putExtra("Zbus 23:", zbus23);
-//        intent.putExtra("Zbus 24:", zbus24);
-//        intent.putExtra("Zbus 31:", zbus31);
-//        intent.putExtra("Zbus 32:", zbus32);
-//        intent.putExtra("Zbus 33:", zbus33);
-//        intent.putExtra("Zbus 34:", zbus34);
-//        intent.putExtra("Zbus 41:", zbus41);
-//        intent.putExtra("Zbus 42:", zbus42);
-//        intent.putExtra("Zbus 43:", zbus43);
-//        intent.putExtra("Zbus 44:", zbus44);
-        intent.putExtra("Matrix:", myStrings);
+        intent.putExtra("Zbus 11:", zbus11);
+        intent.putExtra("Zbus 12:", zbus12);
+        intent.putExtra("Zbus 13:", zbus13);
+        intent.putExtra("Zbus 14:", zbus14);
+        intent.putExtra("Zbus 21:", zbus21);
+        intent.putExtra("Zbus 22:", zbus22);
+        intent.putExtra("Zbus 23:", zbus23);
+        intent.putExtra("Zbus 24:", zbus24);
+        intent.putExtra("Zbus 31:", zbus31);
+        intent.putExtra("Zbus 32:", zbus32);
+        intent.putExtra("Zbus 33:", zbus33);
+        intent.putExtra("Zbus 34:", zbus34);
+        intent.putExtra("Zbus 41:", zbus41);
+        intent.putExtra("Zbus 42:", zbus42);
+        intent.putExtra("Zbus 43:", zbus43);
+        intent.putExtra("Zbus 44:", zbus44);
+//        intent.putExtra("Matrix:", myStrings);
         startActivity(intent);
     }
 }
