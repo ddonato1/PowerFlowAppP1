@@ -49,6 +49,42 @@ public class Functions6buses extends AppCompatActivity {
     String angle2;
     String angle1;
     String iterations;
+    String zbus66;
+    String zbus65;
+    String zbus64;
+    String zbus63;
+    String zbus62;
+    String zbus61;
+    String zbus56;
+    String zbus55;
+    String zbus54;
+    String zbus53;
+    String zbus52;
+    String zbus51;
+    String zbus46;
+    String zbus45;
+    String zbus44;
+    String zbus43;
+    String zbus42;
+    String zbus41;
+    String zbus36;
+    String zbus35;
+    String zbus34;
+    String zbus33;
+    String zbus32;
+    String zbus31;
+    String zbus26;
+    String zbus25;
+    String zbus24;
+    String zbus23;
+    String zbus22;
+    String zbus21;
+    String zbus16;
+    String zbus15;
+    String zbus14;
+    String zbus13;
+    String zbus12;
+    String zbus11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,11 +111,48 @@ public class Functions6buses extends AppCompatActivity {
         mresultTV.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3 +"\n" +voltage4
                 + "\n" +voltage5 + "\n" +voltage6 +"\n\nIterations: " +iterations +"\n\nAngles: \n"
                 +angle1 + "\n" +angle2 + "\n" +angle3 + "\n" +angle4 + "\n" +angle5 + "\n" +angle6 +
-                "\n\nZ Matrix: \n" +myString);
+                "\n\nZ Matrix: \n" /*+myString*/ +bar6MatrixFunction());
     }
 
-//    public void bar6MatrixFunction(){
-//        //input voltage vlaue
+    public String[][] bar6MatrixFunction(){
+    Intent intent = getIntent();
+    zbus11 = intent.getStringExtra("Zbus 11:");
+    zbus12 = intent.getStringExtra("Zbus 12:");
+    zbus13 = intent.getStringExtra("Zbus 13:");
+    zbus14 = intent.getStringExtra("Zbus 14:");
+    zbus15 = intent.getStringExtra("Zbus 15:");
+    zbus16 = intent.getStringExtra("Zbus 16:");
+    zbus21 = intent.getStringExtra("Zbus 21:");
+    zbus22 = intent.getStringExtra("Zbus 22:");
+    zbus23 = intent.getStringExtra("Zbus 23:");
+    zbus24 = intent.getStringExtra("Zbus 24:");
+    zbus25 = intent.getStringExtra("Zbus 25:");
+    zbus26 = intent.getStringExtra("Zbus 26:");
+    zbus31 = intent.getStringExtra("Zbus 31:");
+    zbus32 = intent.getStringExtra("Zbus 32:");
+    zbus33 = intent.getStringExtra("Zbus 33:");
+    zbus34 = intent.getStringExtra("Zbus 34:");
+    zbus35 = intent.getStringExtra("Zbus 35:");
+    zbus36 = intent.getStringExtra("Zbus 36:");
+    zbus41 = intent.getStringExtra("Zbus 41:");
+    zbus42 = intent.getStringExtra("Zbus 42:");
+    zbus43 = intent.getStringExtra("Zbus 43:");
+    zbus44 = intent.getStringExtra("Zbus 44:");
+    zbus45 = intent.getStringExtra("Zbus 45:");
+    zbus46 = intent.getStringExtra("Zbus 46:");
+    zbus51 = intent.getStringExtra("Zbus 51:");
+    zbus52 = intent.getStringExtra("Zbus 52:");
+    zbus53 = intent.getStringExtra("Zbus 53:");
+    zbus54 = intent.getStringExtra("Zbus 54:");
+    zbus55 = intent.getStringExtra("Zbus 55:");
+    zbus56 = intent.getStringExtra("Zbus 56:");
+    zbus61 = intent.getStringExtra("Zbus 61:");
+    zbus62 = intent.getStringExtra("Zbus 62:");
+    zbus63 = intent.getStringExtra("Zbus 63:");
+    zbus64 = intent.getStringExtra("Zbus 64:");
+    zbus65 = intent.getStringExtra("Zbus 65:");
+    zbus66 = intent.getStringExtra("Zbus 66:");
+// input voltage vlaue
 //        voltage1 = findViewById(R.id.volta1);
 //        voltage2 = findViewById(R.id.volta2);
 //        voltage3 = findViewById(R.id.volta3);
@@ -151,54 +224,55 @@ public class Functions6buses extends AppCompatActivity {
 //        int z55A = Integer.parseInt(z55.getText().toString());
 //        int z56A = Integer.parseInt(z56.getText().toString());
 //        int z66A = Integer.parseInt(z66.getText().toString());
-//
-//
-//        EditText zMatrix[][] = {
-////                new android.widget.EditText[6][6];
-////        zMatrix[0][0] = z11;
-////        zMatrix[0][1] = z12;
-////        zMatrix[0][2] = z13;
-////        zMatrix[0][3] = z14;
-////        zMatrix[0][4] = z15;
-////        zMatrix[0][5] = z16;
-////        zMatrix[1][0] = z12;//z21
-////        zMatrix[1][1] = z22;
-////        zMatrix[1][2] = z23;
-////        zMatrix[1][3] = z24;
-////        zMatrix[1][4] = z25;
-////        zMatrix[1][5] = z26;
-////        zMatrix[2][0] = z13;//z31
-////        zMatrix[2][1] = z23;//z32
-////        zMatrix[2][2] = z33;
-////        zMatrix[2][3] = z34;
-////        zMatrix[2][4] = z35;
-////        zMatrix[2][5] = z36;
-////        zMatrix[3][0] = z14;//z41
-////        zMatrix[3][1] = z24;//z42
-////        zMatrix[3][2] = z34;//z43
-////        zMatrix[3][3] = z44;
-////        zMatrix[3][4] = z45;
-////        zMatrix[3][5] = z46;
-////        zMatrix[4][0] = z15;//z51
-////        zMatrix[4][1] = z25;//z52
-////        zMatrix[4][2] = z35;//z53
-////        zMatrix[4][3] = z45;//z54
-////        zMatrix[4][4] = z55;
-////        zMatrix[4][5] = z56;
-////        zMatrix[5][0] = z16;//z61
-////        zMatrix[5][1] = z26;//z62
-////        zMatrix[5][2] = z36;//z63
-////        zMatrix[5][3] = z46;//z64
-////        zMatrix[5][4] = z56;//z65
-////        zMatrix[5][5] = z66;
-//
-////                System.out.print(zMatrix);
-//                {z11, z12, z13, z14, z15, z16},
-//                {z12, z22, z23, z24, z25, z26},
-//                {z13, z23, z33, z34, z35, z36},
-//                {z14, z24, z34, z44, z45, z46},
-//                {z15, z25, z35, z45, z55, z56},
-//                {z16, z26, z36, z46, z56, z66},
-//        };
-//    }
+
+
+        String zMatrix[][] = {
+//                new android.widget.EditText[6][6];
+//        zMatrix[0][0] = z11;
+//        zMatrix[0][1] = z12;
+//        zMatrix[0][2] = z13;
+//        zMatrix[0][3] = z14;
+//        zMatrix[0][4] = z15;
+//        zMatrix[0][5] = z16;
+//        zMatrix[1][0] = z12;//z21
+//        zMatrix[1][1] = z22;
+//        zMatrix[1][2] = z23;
+//        zMatrix[1][3] = z24;
+//        zMatrix[1][4] = z25;
+//        zMatrix[1][5] = z26;
+//        zMatrix[2][0] = z13;//z31
+//        zMatrix[2][1] = z23;//z32
+//        zMatrix[2][2] = z33;
+//        zMatrix[2][3] = z34;
+//        zMatrix[2][4] = z35;
+//        zMatrix[2][5] = z36;
+//        zMatrix[3][0] = z14;//z41
+//        zMatrix[3][1] = z24;//z42
+//        zMatrix[3][2] = z34;//z43
+//        zMatrix[3][3] = z44;
+//        zMatrix[3][4] = z45;
+//        zMatrix[3][5] = z46;
+//        zMatrix[4][0] = z15;//z51
+//        zMatrix[4][1] = z25;//z52
+//        zMatrix[4][2] = z35;//z53
+//        zMatrix[4][3] = z45;//z54
+//        zMatrix[4][4] = z55;
+//        zMatrix[4][5] = z56;
+//        zMatrix[5][0] = z16;//z61
+//        zMatrix[5][1] = z26;//z62
+//        zMatrix[5][2] = z36;//z63
+//        zMatrix[5][3] = z46;//z64
+//        zMatrix[5][4] = z56;//z65
+//        zMatrix[5][5] = z66;
+
+//                System.out.print(zMatrix);
+                {zbus11, zbus12, zbus13, zbus14, zbus15, zbus16},
+                {zbus22, zbus22, zbus23, zbus24, zbus25, zbus26},
+                {zbus32, zbus32, zbus33, zbus34, zbus35, zbus36},
+                {zbus41, zbus42, zbus43, zbus44, zbus45, zbus46},
+                {zbus51, zbus52, zbus53, zbus54, zbus55, zbus56},
+                {zbus61, zbus62, zbus63, zbus64, zbus65, zbus66},
+        };
+        return zMatrix;
+    }
 }

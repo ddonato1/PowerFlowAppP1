@@ -59,6 +59,55 @@ public class Functions7buses extends AppCompatActivity {
     String angle6;
     String angle7;
     String[] myString;
+    String zbus77;
+    String zbus76;
+    String zbus75;
+    String zbus74;
+    String zbus73;
+    String zbus72;
+    String zbus71;
+    String zbus67;
+    String zbus66;
+    String zbus65;
+    String zbus64;
+    String zbus63;
+    String zbus62;
+    String zbus61;
+    String zbus57;
+    String zbus56;
+    String zbus55;
+    String zbus54;
+    String zbus53;
+    String zbus52;
+    String zbus51;
+    String zbus47;
+    String zbus46;
+    String zbus45;
+    String zbus44;
+    String zbus43;
+    String zbus42;
+    String zbus41;
+    String zbus37;
+    String zbus36;
+    String zbus35;
+    String zbus34;
+    String zbus33;
+    String zbus32;
+    String zbus31;
+    String zbus27;
+    String zbus26;
+    String zbus25;
+    String zbus24;
+    String zbus23;
+    String zbus22;
+    String zbus21;
+    String zbus17;
+    String zbus16;
+    String zbus15;
+    String zbus14;
+    String zbus13;
+    String zbus12;
+    String zbus11;
 
 
     @Override
@@ -88,11 +137,61 @@ public class Functions7buses extends AppCompatActivity {
         mresultTV.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3 +"\n" +voltage4
                 + "\n" +voltage5 + "\n" +voltage6 + "\n" + voltage7 +"\n\nIterations: " +iterations
                 +"\n\nAngles: \n" +angle1 + "\n" +angle2 + "\n" +angle3 + "\n" +angle4 + "\n"
-                +angle5 + "\n" +angle6 + "\n" +angle7 + "\n\nZ Matrix: \n" +myString);
+                +angle5 + "\n" +angle6 + "\n" +angle7 + "\n\nZ Matrix: \n" /*+myString*/ +bar7MatrixFunction());
     }
 
-//    public void bar7MatrixFunction() {
-//        //input voltage vlaue
+    public String[][] bar7MatrixFunction() {
+    Intent intent = getIntent();
+    zbus11 = intent.getStringExtra("Zbus 11:");
+    zbus12 = intent.getStringExtra("Zbus 12:");
+    zbus13 = intent.getStringExtra("Zbus 13:");
+    zbus14 = intent.getStringExtra("Zbus 14:");
+    zbus15 = intent.getStringExtra("Zbus 15:");
+    zbus16 = intent.getStringExtra("Zbus 16:");
+    zbus17 = intent.getStringExtra("Zbus 17:");
+    zbus21 = intent.getStringExtra("Zbus 21:");
+    zbus22 = intent.getStringExtra("Zbus 22:");
+    zbus23 = intent.getStringExtra("Zbus 23:");
+    zbus24 = intent.getStringExtra("Zbus 24:");
+    zbus25 = intent.getStringExtra("Zbus 25:");
+    zbus26 = intent.getStringExtra("Zbus 26:");
+    zbus27 = intent.getStringExtra("Zbus 27:");
+    zbus31 = intent.getStringExtra("Zbus 31:");
+    zbus32 = intent.getStringExtra("Zbus 32:");
+    zbus33 = intent.getStringExtra("Zbus 33:");
+    zbus34 = intent.getStringExtra("Zbus 34:");
+    zbus35 = intent.getStringExtra("Zbus 35:");
+    zbus36 = intent.getStringExtra("Zbus 36:");
+    zbus37 = intent.getStringExtra("Zbus 37:");
+    zbus41 = intent.getStringExtra("Zbus 41:");
+    zbus42 = intent.getStringExtra("Zbus 42:");
+    zbus43 = intent.getStringExtra("Zbus 43:");
+    zbus44 = intent.getStringExtra("Zbus 44:");
+    zbus45 = intent.getStringExtra("Zbus 45:");
+    zbus46 = intent.getStringExtra("Zbus 46:");
+    zbus47 = intent.getStringExtra("Zbus 47:");
+    zbus51 = intent.getStringExtra("Zbus 51:");
+    zbus52 = intent.getStringExtra("Zbus 52:");
+    zbus53 = intent.getStringExtra("Zbus 53:");
+    zbus54 = intent.getStringExtra("Zbus 54:");
+    zbus55 = intent.getStringExtra("Zbus 55:");
+    zbus56 = intent.getStringExtra("Zbus 56:");
+    zbus57 = intent.getStringExtra("Zbus 57:");
+    zbus61 = intent.getStringExtra("Zbus 61:");
+    zbus62 = intent.getStringExtra("Zbus 62:");
+    zbus63 = intent.getStringExtra("Zbus 63:");
+    zbus64 = intent.getStringExtra("Zbus 64:");
+    zbus65 = intent.getStringExtra("Zbus 65:");
+    zbus66 = intent.getStringExtra("Zbus 66:");
+    zbus67 = intent.getStringExtra("Zbus 67:");
+    zbus71 = intent.getStringExtra("Zbus 71:");
+    zbus72 = intent.getStringExtra("Zbus 72:");
+    zbus73 = intent.getStringExtra("Zbus 73:");
+    zbus74 = intent.getStringExtra("Zbus 74:");
+    zbus75 = intent.getStringExtra("Zbus 75:");
+    zbus76 = intent.getStringExtra("Zbus 76:");
+    zbus77 = intent.getStringExtra("Zbus 77:");
+//    input voltage vlaue
 //        voltage1 = findViewById(R.id.voltS1);
 //        voltage2 = findViewById(R.id.voltage2);
 //        voltage3 = findViewById(R.id.voltage3);
@@ -185,7 +284,7 @@ public class Functions7buses extends AppCompatActivity {
 //        int z77A = Integer.parseInt(z77.getText().toString());
 //
 //
-//        EditText zMatrix[][] = {
+        String zMatrix[][] = {
 ////                new android.widget.EditText[7][7];
 ////        zMatrix[0][0] = z11;
 ////        zMatrix[0][1] = z12;
@@ -236,16 +335,17 @@ public class Functions7buses extends AppCompatActivity {
 ////        zMatrix[6][4] = z57;//z75
 ////        zMatrix[6][5] = z67;//z76
 ////        zMatrix[6][6] = z77;
-//
-//                {z11, z12, z13, z14, z15, z16, z17},
-//                {z12, z22, z23, z24, z25, z26, z27},
-//                {z13, z23, z33, z34, z35, z36, z37},
-//                {z14, z24, z34, z44, z45, z46, z47},
-//                {z15, z25, z35, z45, z55, z56, z57},
-//                {z16, z26, z36, z46, z56, z66, z67},
-//                {z17, z27, z37, z47, z57, z67, z77},
-//
-////        System.out.print(zMatrix);
-//        };
-//    }
+
+                {zbus11, zbus12, zbus13, zbus14, zbus15, zbus16, zbus17},
+                {zbus21, zbus22, zbus23, zbus24, zbus25, zbus26, zbus27},
+                {zbus31, zbus32, zbus33, zbus34, zbus35, zbus36, zbus37},
+                {zbus41, zbus42, zbus43, zbus44, zbus45, zbus46, zbus47},
+                {zbus51, zbus52, zbus53, zbus54, zbus55, zbus56, zbus57},
+                {zbus61, zbus62, zbus63, zbus64, zbus65, zbus66, zbus67},
+                {zbus71, zbus72, zbus73, zbus74, zbus75, zbus76, zbus77},
+
+//        System.out.print(zMatrix);
+        };
+        return zMatrix;
+    }
 }
