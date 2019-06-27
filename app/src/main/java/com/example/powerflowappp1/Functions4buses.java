@@ -136,4 +136,8 @@ public class Functions4buses extends AppCompatActivity {
 //
 //        };
 //    }
+
+    public void calculateButton(){
+        
+    }
 }
