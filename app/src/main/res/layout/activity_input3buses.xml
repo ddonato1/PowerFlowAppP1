@@ -230,18 +230,18 @@
 
         <TextView
             android:id="@+id/textView18"
-            android:layout_width="228dp"
-            android:layout_height="24dp"
+            android:layout_width="115dp"
+            android:layout_height="38dp"
             android:layout_below="@+id/angle3"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="106dp"
-            android:layout_marginLeft="106dp"
-            android:layout_marginTop="31dp"
-            android:layout_marginEnd="78dp"
-            android:layout_marginRight="78dp"
+            android:layout_marginStart="98dp"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="92dp"
+            android:layout_marginRight="92dp"
             android:text="Enter the z values given:"
             android:textColor="#009688"
             android:textSize="18sp" />
@@ -261,13 +261,13 @@
             android:layout_marginEnd="148dp"
             android:layout_marginRight="148dp"
             android:ems="10"
-            android:hint="Z11 "
+            android:hint="Z11"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/z12"
-            android:layout_width="115dp"
-            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/z11"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
@@ -284,8 +284,8 @@
 
         <EditText
             android:id="@+id/z13"
-            android:layout_width="115dp"
-            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/z12"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
@@ -300,10 +300,11 @@
             android:hint="Z13"
             android:inputType="textPersonName" />
 
+
         <EditText
             android:id="@+id/z22"
-            android:layout_width="115dp"
-            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/z13"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
@@ -320,8 +321,8 @@
 
         <EditText
             android:id="@+id/z23"
-            android:layout_width="115dp"
-            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/z22"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
@@ -338,8 +339,8 @@
 
         <EditText
             android:id="@+id/z33"
-            android:layout_width="115dp"
-            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/z23"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
@@ -363,11 +364,11 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="162dp"
-            android:layout_marginLeft="162dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="162dp"
-            android:layout_marginRight="162dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="163dp"
+            android:layout_marginRight="163dp"
             android:background="#00BCD4"
             android:text="Next" />
     </RelativeLayout>
