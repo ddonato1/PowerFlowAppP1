@@ -92,10 +92,12 @@ public class Functions4buses extends AppCompatActivity {
         TextView mresultTV = findViewById(R.id.displayInputs);
         mresultTV.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3 +"\n" +voltage4
                 +"\n\nIterations: " +iterations +"\n\nAngles: \n" +angle1 + "\n" +angle2 + "\n"
-                +angle3 + "\n" +angle4 + "\n\nZ Matrix: \n" +bar4MatrixFunction());
+                +angle3 + "\n" +angle4 + "\n\nZ Matrix: \n");
+
+        bar4MatrixFunction();
     }
 
-    public String[][] bar4MatrixFunction(){
+    public void bar4MatrixFunction(){
         Intent intent = getIntent();
         zbus11 = intent.getStringExtra("Zbus 11:");
         zbus12 = intent.getStringExtra("Zbus 12:");
@@ -163,35 +165,65 @@ public class Functions4buses extends AppCompatActivity {
 ////        int z44A = Integer.parseInt(z44.getText().toString());
 //
 //
-        String zMatrix[][] = {
-//                new android.widget.EditText[4][4];
-//        zMatrix[0][0] = z11;
-//        zMatrix[0][1] = z12;
-//        zMatrix[0][2] = z13;
-//        zMatrix[0][3] = z14;
-//        zMatrix[1][0] = z12;//z21
-//        zMatrix[1][1] = z22;
-//        zMatrix[1][2] = z23;
-//        zMatrix[1][3] = z24;
-//        zMatrix[2][0] = z13;//z31
-//        zMatrix[2][1] = z23;//z32
-//        zMatrix[2][2] = z33;
-//        zMatrix[2][3] = z34;
-//        zMatrix[3][0] = z14;//z41
-//        zMatrix[3][1] = z24;//z42
-//        zMatrix[3][2] = z34;//z43
-//        zMatrix[3][3] = z44;
-//        System.out.print(zMatrix);
+//        String zMatrix[][] = {
+////                new android.widget.EditText[4][4];
+////        zMatrix[0][0] = z11;
+////        zMatrix[0][1] = z12;
+////        zMatrix[0][2] = z13;
+////        zMatrix[0][3] = z14;
+////        zMatrix[1][0] = z12;//z21
+////        zMatrix[1][1] = z22;
+////        zMatrix[1][2] = z23;
+////        zMatrix[1][3] = z24;
+////        zMatrix[2][0] = z13;//z31
+////        zMatrix[2][1] = z23;//z32
+////        zMatrix[2][2] = z33;
+////        zMatrix[2][3] = z34;
+////        zMatrix[3][0] = z14;//z41
+////        zMatrix[3][1] = z24;//z42
+////        zMatrix[3][2] = z34;//z43
+////        zMatrix[3][3] = z44;
+////        System.out.print(zMatrix);
+//
+//                {zbus11, zbus12, zbus13, zbus14},
+//                {zbus21, zbus22, zbus23, zbus24},
+//                {zbus31, zbus32, zbus33, zbus34},
+//                {zbus41, zbus42, zbus43, zbus44},
+//        };
+//        return zMatrix;
+        TextView zBus11 = findViewById(R.id.zBUS_11);
+        TextView zBus12 = findViewById(R.id.zBUS_12);
+        TextView zBus13 = findViewById(R.id.zBUS_13);
+        TextView zBus14 = findViewById(R.id.zBUS_14);
+        TextView zBus21 = findViewById(R.id.zBUS_21);
+        TextView zBus22 = findViewById(R.id.zBUS_22);
+        TextView zBus23 = findViewById(R.id.zBUS_23);
+        TextView zBus24 = findViewById(R.id.zBUS_24);
+        TextView zBus31 = findViewById(R.id.zBUS_31);
+        TextView zBus32 = findViewById(R.id.zBUS_32);
+        TextView zBus33 = findViewById(R.id.zBUS_33);
+        TextView zBus34 = findViewById(R.id.zBUS_34);
+        TextView zBus41 = findViewById(R.id.zBUS_41);
+        TextView zBus42 = findViewById(R.id.zBUS_42);
+        TextView zBus43 = findViewById(R.id.zBUS_43);
+        TextView zBus44 = findViewById(R.id.zBUS_44);
 
-                {zbus11, zbus12, zbus13, zbus14},
-                {zbus21, zbus22, zbus23, zbus24},
-                {zbus31, zbus32, zbus33, zbus34},
-                {zbus41, zbus42, zbus43, zbus44},
-        };
-        return zMatrix;
+        zBus11.setText(zbus11);
+        zBus12.setText(zbus12);
+        zBus13.setText(zbus13);
+        zBus14.setText(zbus14);
+        zBus21.setText(zbus21);
+        zBus22.setText(zbus22);
+        zBus23.setText(zbus23);
+        zBus24.setText(zbus24);
+        zBus31.setText(zbus31);
+        zBus32.setText(zbus32);
+        zBus33.setText(zbus33);
+        zBus34.setText(zbus34);
+        zBus41.setText(zbus41);
+        zBus42.setText(zbus42);
+        zBus43.setText(zbus43);
+        zBus44.setText(zbus44);
     }
-
-    public void calculateButton(){
-
-    }
+    
 }

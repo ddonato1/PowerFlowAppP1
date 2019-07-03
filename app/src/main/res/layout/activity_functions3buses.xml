@@ -3,29 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="700dp"
+    android:layout_height="match_parent"
     tools:context=".Functions3buses">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="700dp">
 
         <TextView
             android:id="@+id/displayMatrix3"
-            android:layout_width="196dp"
-            android:layout_height="77dp"
+            android:layout_width="262dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="107dp"
-            android:layout_marginLeft="107dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="108dp"
-            android:layout_marginRight="108dp"
-            android:layout_marginBottom="97dp"
-            android:textSize="18sp" />
+            android:layout_marginStart="52dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="98dp"
+            android:layout_marginRight="98dp"
+            android:hint="Inputs"
+            android:textSize="24sp" />
 
         <TableLayout
             android:id="@+id/tableLayout"
@@ -34,7 +34,7 @@
             android:layout_below="@+id/displayMatrix3"
             android:layout_marginHorizontal="10dp"
             android:layout_marginVertical="10dp"
-            android:layout_marginTop="24dp">
+            android:layout_marginTop="32dp">
 
             <TableRow>
 
@@ -101,7 +101,7 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:id="@+id/z32"
+                    android:id="@+id/zBUS32"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="1dp"
@@ -109,7 +109,7 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:id="@+id/z33"
+                    android:id="@+id/zBUS33"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="1dp"
