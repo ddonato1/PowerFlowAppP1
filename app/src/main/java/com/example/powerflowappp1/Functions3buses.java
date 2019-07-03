@@ -3,6 +3,7 @@ package com.example.powerflowappp1;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -38,11 +39,14 @@ public class Functions3buses extends AppCompatActivity {
 
         iter = intent.getStringExtra("Iterations:");
 
+        String zMatrixResult = bar3MatrixFunction();
+//        Log.v("method", zMatrixResult);
+
 
         TextView input = findViewById(R.id.displayMatrix3);
         input.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3
-                +"\n\nIterations: " +iter +"\n\nAngles: \n" +angleB1 + "\n" +angleB2 + "\n"
-                +angleB3  + "\n\nZ Matrix: \n"+ this.bar3MatrixFunction());
+                +"\n\nIterations: " +iter +"\n\nAngles: \n" +angleB1 + "\n" + angleB2 + "\n"
+                + angleB3  + "\n\nZ Matrix: \n"+ Log.v("Method", zMatrixResult));
 
 //        TextView input = findViewById(R.id.displayMatrix3);
 //        input.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3
@@ -50,15 +54,11 @@ public class Functions3buses extends AppCompatActivity {
 //                +angleB3  + "\n\nZ Matrix: \n"+ z11 + " " + z12 + " " + z13 + "\n"+
 //                z12+ " " +z22+ " " +z23+ "\n" +z13+ " " + z23 + " " + z33);
 
-
     }
 
-    public String[][] bar3MatrixFunction(){
+    public String bar3MatrixFunction(){
 
         Intent intent1 = getIntent();
-
-//        //input voltage value
-//        voltage1 = intent1
 
         z11 = intent1.getStringExtra("Zbus 11:");
         z12 = intent1.getStringExtra("Zbus 12:");
@@ -67,12 +67,10 @@ public class Functions3buses extends AppCompatActivity {
         z23 = intent1.getStringExtra("Zbus 23:");
         z33 = intent1.getStringExtra("Zbus 33:");
 
-
         String zMatrix[][] = {
-                {z11, z12, z13, z14},
-                {z12, z22, z23, z24},
-                {z13, z23, z33, z34},
-                {z14, z24, z34, z44},
+                {z11, z12, z13},
+                {z12, z22, z23},
+                {z13, z23, z33},
 
 //                zMatrix[0][0] = z11;
 //                zMatrix[0][1] = z12;
@@ -95,7 +93,7 @@ public class Functions3buses extends AppCompatActivity {
 //
 //        setResult(RESULT_OK, resultIntent);
 
-        return zMatrix;
+        return zMatrix.toString();
     }
 
 //    public void bar4MatrixFunction(){
