@@ -3,7 +3,6 @@ package com.example.powerflowappp1;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -100,7 +99,7 @@ public class Functions4buses extends AppCompatActivity {
         bar4MatrixFunction();
     }
 
-    public void bar4MatrixFunction(){
+    public String[][] bar4MatrixFunction(){
         String zbus[][] = new String[4][4];
 
         TextView zBus11 = findViewById(R.id.zBUS_11);
@@ -118,6 +117,8 @@ public class Functions4buses extends AppCompatActivity {
         zBus12.setText(zbus[0][1]);
         zBus13.setText(zbus[0][2]);
         zBus14.setText(zbus[0][3]);
+
+        return zbus;
 
 //        Intent intent = getIntent();
 //        zbus11 = intent.getStringExtra("Zbus 11:");
