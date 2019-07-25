@@ -1,18 +1,20 @@
 package com.example.powerflowappp1;
 
 import android.content.Intent;
+import android.graphics.Matrix;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class Functions3buses extends AppCompatActivity {
 
      String voltage1, voltage2, voltage3, voltage4, voltage5, voltage6, voltage7,
-            angleB1, angleB2,angleB3, angleB4, angleB5, angleB6, angleB7,
-            z11,z12,z13,z14,z15,z16,z17,z22,z23,z24,z25,z26,z27,z33,z34,z35,z36,z37, z44,z45,z46,z47,z55,z56,z57,z66,z67,z77,
-            iter;
+            angleB1, angleB2,angleB3, angleB4, angleB5, angleB6, angleB7,iter;
+     ComplexNum z11,z12,z13,z14,z15,z16,z17,z22,z23,z24,z25,z26,z27,z33,z34,z35,z36,z37, z44,z45,z46,z47,z55,z56,z57,z66,z67,z77;
 
 
     @Override
@@ -30,6 +32,13 @@ public class Functions3buses extends AppCompatActivity {
         angleB2 = intent.getStringExtra("Angle 2:");
         angleB3 = intent.getStringExtra("Angle 3:");
 
+//        z11 = findViewById(R.id.z11);
+//        z12 = findViewById(R.id.z12);
+//        z13 = findViewById(R.id.z13);
+//        z22 = findViewById(R.id.z22);
+//        z23 = findViewById(R.id.z23);
+//        z33 = findViewById(R.id.z33);
+
 //        z11 = intent.getStringExtra("Zbus 11:");
 //        z12 = intent.getStringExtra("Zbus 12:");
 //        z13 = intent.getStringExtra("Zbus 13:");
@@ -37,40 +46,118 @@ public class Functions3buses extends AppCompatActivity {
 //        z23 = intent.getStringExtra("Zbus 23:");
 //        z33 = intent.getStringExtra("Zbus 33:");
 
+        String z11B = intent.getStringExtra("Zbus 11:");
+        String z12B = intent.getStringExtra("Zbus 12:");
+        String z13B = intent.getStringExtra("Zbus 13:");
+        String z22B = intent.getStringExtra("Zbus 22:");
+        String z23B = intent.getStringExtra("Zbus 23:");
+        String z33B = intent.getStringExtra("Zbus 33:");
+
+
+        String x[] = z11B.split("\\+|j");
+        String y[] = z12B.split("\\+|j");
+        String z[] = z13B.split("\\+|j");
+        String w[] = z22B.split("\\+|j");
+        String v[] = z23B.split("\\+|j");
+        String b[] = z33B.split("\\+|j");
+
+
+
+        double z11Real = Double.parseDouble(x[0]);
+        double z11Imaginary = Double.parseDouble(x[1]);
+
+        double z12Real = Double.parseDouble(y[0]);
+        double z12Imaginary = Double.parseDouble(y[1]);
+
+        double z13Real = Double.parseDouble(z[0]);
+        double z13Imaginary = Double.parseDouble(z[1]);
+
+        double z22Real = Double.parseDouble(w[0]);
+        double z22Imaginary = Double.parseDouble(w[1]);
+
+        double z23Real = Double.parseDouble(v[0]);
+        double z23Imaginary = Double.parseDouble(v[1]);
+
+        double z33Real = Double.parseDouble(b[0]);
+        double z33Imaginary = Double.parseDouble(b[1]);
+
+        //calcs
+
+        double y11R = 1.0/z11Real;
+        double y11I = 1.0/z11Imaginary;
+
+        double y12R = 1.0/z12Real;
+        double y12I = 1.0/z12Imaginary;
+
+        double y13R = 1.0/z13Real;
+        double y13I = 1.0/z13Imaginary;
+
+        double y22R = 1.0/z22Real;
+        double y22I = 1.0/z22Imaginary;
+
+        double y23R = 1.0/z23Real;
+        double y23I = 1.0/z23Imaginary;
+
+        double y33R = 1.0/z33Real;
+        double y33I = 1.0/z33Imaginary;
+
+        //ti 1 decimal
+        DecimalFormat df = new DecimalFormat("#.#");
+
+        String y11A = df.format(y11R) + "+" + df.format(y11I) + "j";
+        String y12A = df.format(y12R) + "+" + df.format(y12I) + "j";
+        String y13A = df.format(y13R) + "+" + df.format(y13I) + "j";
+        String y22A = df.format(y22R) + "+" + df.format(y22I) + "j";
+        String y23A = df.format(y23R) + "+" + df.format(y23I) + "j";
+        String y33A = df.format(y33R) + "+" + df.format(y33I) + "j";
+
+
+//                double z12A = Double.parseDouble(z12);
+//        double z13A = Double.parseDouble(z13);
+//        double z22A = Double.parseDouble(z22);
+//        double z23A = Double.parseDouble(z23);
+//        double z33A = Double.parseDouble(z33);
+
+
+
         iter = intent.getStringExtra("Iterations:");
 
-        String zMatrixResult = bar3MatrixFunction();
+//        String zMatrixResult = bar3MatrixFunction();
 //        Log.v("method", zMatrixResult);
 
 
-        TextView input = findViewById(R.id.displayMatrix3);
-        input.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3
-                +"\n\nIterations: " +iter +"\n\nAngles: \n" +angleB1 + "\n" + angleB2 + "\n"
-                + angleB3  + "\n\nZ Matrix: \n"+ Log.v("Method", zMatrixResult));
-
 //        TextView input = findViewById(R.id.displayMatrix3);
 //        input.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3
-//                +"\n\nIterations: " +iter +"\n\nAngles: \n" +angleB1 + "\n" +angleB2 + "\n"
-//                +angleB3  + "\n\nZ Matrix: \n"+ z11 + " " + z12 + " " + z13 + "\n"+
-//                z12+ " " +z22+ " " +z23+ "\n" +z13+ " " + z23 + " " + z33);
+//                +"\n\nIterations: " +iter +"\n\nAngles: \n" +angleB1 + "\n" + angleB2 + "\n"
+//                + angleB3  + "\n\nZ Matrix: \n"+ bar3MatrixFunction());
+
+        TextView input = findViewById(R.id.displayMatrix3);
+        input.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3
+                +"\n\nIterations: " +iter +"\n\nAngles: \n" +angleB1 + "\n" +angleB2 + "\n"
+                +angleB3  + "\n\nZ Matrix: \n"+ z11B + "  " + z12B + "  " + z13B + "\n"+
+                z12B + "  " + z22B + "  " + z23B + "\n" + z13B + "  " + z23B + "  " + z33B + "\n\n Y Matrix: \n" + y11A + "  " + y12A + "  " + y13A + "\n"+
+                y12A +  "  "  + y22A+ "  " +y23A + "\n" + y13A + "  " + y23A + "  " + y33A);
+        //"\n\n Y Matrix: \n" + 1/z11A + " " + 1/z12A + " " + 1/z13A + "\n"+
+        //                1/z12A +  " "  + 1/z22A+ " " +1/z23A + "\n" + 1/z13A + " " + 1/z23A + " " + 1/z33A
 
     }
 
-    public String bar3MatrixFunction(){
-
-        Intent intent1 = getIntent();
-
-        z11 = intent1.getStringExtra("Zbus 11:");
-        z12 = intent1.getStringExtra("Zbus 12:");
-        z13 = intent1.getStringExtra("Zbus 13:");
-        z22 = intent1.getStringExtra("Zbus 22:");
-        z23 = intent1.getStringExtra("Zbus 23:");
-        z33 = intent1.getStringExtra("Zbus 33:");
-
-        String zMatrix[][] = {
-                {z11, z12, z13},
-                {z12, z22, z23},
-                {z13, z23, z33},
+//    public String bar3MatrixFunction(){
+//
+//        Intent intent1 = getIntent();
+//
+//}//
+//        z11 = intent1.getStringExtra("Zbus 11:");
+//        z12 = intent1.getStringExtra("Zbus 12:");
+//        z13 = intent1.getStringExtra("Zbus 13:");
+//        z22 = intent1.getStringExtra("Zbus 22:");
+//        z23 = intent1.getStringExtra("Zbus 23:");
+//        z33 = intent1.getStringExtra("Zbus 33:");
+//
+//        String zMatrix[][] = {
+//                {z11, z12, z13},
+//                {z12, z22, z23},
+//                {z13, z23, z33},
 
 //                zMatrix[0][0] = z11;
 //                zMatrix[0][1] = z12;
@@ -84,7 +171,8 @@ public class Functions3buses extends AppCompatActivity {
 ////        System.out.print(zMatrix);
 
 
-        };
+//        };
+//        Matrix A = new Matrix(zMatrix.toString());
 
 
 
@@ -93,341 +181,94 @@ public class Functions3buses extends AppCompatActivity {
 //
 //        setResult(RESULT_OK, resultIntent);
 
-        return zMatrix.toString();
-    }
-
-//    public void bar4MatrixFunction(){
-//        //input voltage vlaue
-//        voltage1 = findViewById(R.id.volt_1);
-//        voltage2 = findViewById(R.id.volt_2);
-//        voltage3 = findViewById(R.id.volt_3);
-//        voltage4 = findViewById(R.id.volt_4);
-//
-//        //input angle value
-//        angleB1 = findViewById(R.id.Angle1);
-//        angleB2 = findViewById(R.id.Angle2);
-//        angleB3 = findViewById(R.id.Angle3);
-//        angleB4 = findViewById(R.id.Angle4);
-//
-//        //input z values
-//        z11 = findViewById(R.id.Z11);
-//        z12 = findViewById(R.id.Z12);
-//        z13 = findViewById(R.id.Z13);
-//        z14 = findViewById(R.id.Z14);
-//        z22 = findViewById(R.id.Z22);
-//        z23 = findViewById(R.id.Z23);
-//        z24 = findViewById(R.id.Z24);
-//        z33 = findViewById(R.id.Z33);
-//        z34 = findViewById(R.id.Z34);
-//        z44 = findViewById(R.id.Z44);
-//
-//        EditText zMatrix[][] = {
-////                new android.widget.EditText[4][4];
-////        zMatrix[0][0] = z11;
-////        zMatrix[0][1] = z12;
-////        zMatrix[0][2] = z13;
-////        zMatrix[0][3] = z14;
-////        zMatrix[1][0] = z12;//z21
-////        zMatrix[1][1] = z22;
-////        zMatrix[1][2] = z23;
-////        zMatrix[1][3] = z24;
-////        zMatrix[2][0] = z13;//z31
-////        zMatrix[2][1] = z23;//z32
-////        zMatrix[2][2] = z33;
-////        zMatrix[2][3] = z34;
-////        zMatrix[3][0] = z14;//z41
-////        zMatrix[3][1] = z24;//z42
-////        zMatrix[3][2] = z34;//z43
-////        zMatrix[3][3] = z44;
-////        System.out.print(zMatrix);
-//
-//                {z11, z12, z13, z14},
-//                {z12, z22, z23, z24},
-//                {z13, z23, z33, z34},
-//                {z14, z24, z34, z44},
-//
-//        };
-//    }
-//
-//    public void bar5MatrixFunction(){
-//        //input voltage vlaue
-//        voltage1 = findViewById(R.id.Voltage1slack);
-//        voltage2 = findViewById(R.id.Voltage2);
-//        voltage3 = findViewById(R.id.Voltage3);
-//        voltage4 = findViewById(R.id.Voltage4);
-//        voltage5 = findViewById(R.id.Voltage5);
-//
-//        //input angle value
-//        angleB1 = findViewById(R.id.Angulo1);
-//        angleB2 = findViewById(R.id.Angulo2);
-//        angleB3 = findViewById(R.id.Angulo3);
-//        angleB4 = findViewById(R.id.Angulo4);
-//        angleB5 = findViewById(R.id.Angulo5);
-//
-//        //input z values
-//        z11 = findViewById(R.id.zbus11);
-//        z12 = findViewById(R.id.zbus12);
-//        z13 = findViewById(R.id.zbus13);
-//        z14 = findViewById(R.id.zbus14);
-//        z15 = findViewById(R.id.zbus15);
-//        z22 = findViewById(R.id.zbus22);
-//        z23 = findViewById(R.id.zbus23);
-//        z24 = findViewById(R.id.zbus24);
-//        z25 = findViewById(R.id.zbus25);
-//        z33 = findViewById(R.id.zbus33);
-//        z34 = findViewById(R.id.zbus34);
-//        z35 = findViewById(R.id.zbus35);
-//        z44 = findViewById(R.id.zbus44);
-//        z45 = findViewById(R.id.zbus45);
-//        z55 = findViewById(R.id.zbus55);
-//
-//        EditText zMatrix[][] = {
-////                new android.widget.EditText[5][5];
-////        zMatrix[0][0] = z11;
-////        zMatrix[0][1] = z12;
-////        zMatrix[0][2] = z13;
-////        zMatrix[0][3] = z14;
-////        zMatrix[0][4] = z15;
-////        zMatrix[1][0] = z12;//z21
-////        zMatrix[1][1] = z22;
-////        zMatrix[1][2] = z23;
-////        zMatrix[1][3] = z24;
-////        zMatrix[1][4] = z25;
-////        zMatrix[2][0] = z13;//z31
-////        zMatrix[2][1] = z23;//z32
-////        zMatrix[2][2] = z33;
-////        zMatrix[2][3] = z34;
-////        zMatrix[2][4] = z35;
-////        zMatrix[3][0] = z14;//z41
-////        zMatrix[3][1] = z24;//z42
-////        zMatrix[3][2] = z34;//z43
-////        zMatrix[3][3] = z44;
-////        zMatrix[3][4] = z45;
-////        zMatrix[4][0] = z15;//z51
-////        zMatrix[4][1] = z25;//z52
-////        zMatrix[4][2] = z35;//z53
-////        zMatrix[4][3] = z45;//z54
-////        zMatrix[4][4] = z55;
-//
-//                {z11, z12, z13, z14, z15},
-//                {z12, z22, z23, z24, z25},
-//                {z13, z23, z33, z34, z35},
-//                {z14, z24, z34, z44, z45},
-//                {z15, z25, z35, z45, z55},
-//
-////                System.out.print(zMatrix);
-//        };
-//    }
-//
-//    public void bar6MatrixFunction(){
-//        //input voltage vlaue
-//        voltage1 = findViewById(R.id.volta1);
-//        voltage2 = findViewById(R.id.volta2);
-//        voltage3 = findViewById(R.id.volta3);
-//        voltage4 = findViewById(R.id.volta4);
-//        voltage5 = findViewById(R.id.volta5);
-//        voltage6 = findViewById(R.id.volta6);
-//
-//        //input angle value
-//        angleB1 = findViewById(R.id.angulo1);
-//        angleB2 = findViewById(R.id.angulo2);
-//        angleB3 = findViewById(R.id.angulo3);
-//        angleB4 = findViewById(R.id.angulo4);
-//        angleB5 = findViewById(R.id.angulo5);
-//        angleB6 = findViewById(R.id.angulo6);
-//
-//        //input z values
-//        z11 = findViewById(R.id.Zbus11);
-//        z12 = findViewById(R.id.Zbus12);
-//        z13 = findViewById(R.id.Zbus13);
-//        z14 = findViewById(R.id.Zbus14);
-//        z15 = findViewById(R.id.Zbus15);
-//        z16 = findViewById(R.id.Zbus16);
-//        z22 = findViewById(R.id.Zbus22);
-//        z23 = findViewById(R.id.Zbus23);
-//        z24 = findViewById(R.id.Zbus24);
-//        z25 = findViewById(R.id.Zbus25);
-//        z26 = findViewById(R.id.Zbus26);
-//        z33 = findViewById(R.id.Zbus33);
-//        z34 = findViewById(R.id.Zbus34);
-//        z35 = findViewById(R.id.Zbus35);
-//        z36 = findViewById(R.id.Zbus36);
-//        z44 = findViewById(R.id.Zbus44);
-//        z45 = findViewById(R.id.Zbus45);
-//        z46 = findViewById(R.id.Zbus46);
-//        z55 = findViewById(R.id.Zbus55);
-//        z56 = findViewById(R.id.Zbus56);
-//        z66 = findViewById(R.id.Zbus66);
-//
-//        EditText zMatrix[][] = {
-////                new android.widget.EditText[6][6];
-////        zMatrix[0][0] = z11;
-////        zMatrix[0][1] = z12;
-////        zMatrix[0][2] = z13;
-////        zMatrix[0][3] = z14;
-////        zMatrix[0][4] = z15;
-////        zMatrix[0][5] = z16;
-////        zMatrix[1][0] = z12;//z21
-////        zMatrix[1][1] = z22;
-////        zMatrix[1][2] = z23;
-////        zMatrix[1][3] = z24;
-////        zMatrix[1][4] = z25;
-////        zMatrix[1][5] = z26;
-////        zMatrix[2][0] = z13;//z31
-////        zMatrix[2][1] = z23;//z32
-////        zMatrix[2][2] = z33;
-////        zMatrix[2][3] = z34;
-////        zMatrix[2][4] = z35;
-////        zMatrix[2][5] = z36;
-////        zMatrix[3][0] = z14;//z41
-////        zMatrix[3][1] = z24;//z42
-////        zMatrix[3][2] = z34;//z43
-////        zMatrix[3][3] = z44;
-////        zMatrix[3][4] = z45;
-////        zMatrix[3][5] = z46;
-////        zMatrix[4][0] = z15;//z51
-////        zMatrix[4][1] = z25;//z52
-////        zMatrix[4][2] = z35;//z53
-////        zMatrix[4][3] = z45;//z54
-////        zMatrix[4][4] = z55;
-////        zMatrix[4][5] = z56;
-////        zMatrix[5][0] = z16;//z61
-////        zMatrix[5][1] = z26;//z62
-////        zMatrix[5][2] = z36;//z63
-////        zMatrix[5][3] = z46;//z64
-////        zMatrix[5][4] = z56;//z65
-////        zMatrix[5][5] = z66;
-//
-////                System.out.print(zMatrix);
-//                {z11, z12, z13, z14, z15, z16},
-//                {z12, z22, z23, z24, z25, z26},
-//                {z13, z23, z33, z34, z35, z36},
-//                {z14, z24, z34, z44, z45, z46},
-//                {z15, z25, z35, z45, z55, z56},
-//                {z16, z26, z36, z46, z56, z66},
-//        };
+//        return zMatrix.toString();
 //    }
 
-//    public void bar7MatrixFunction() {
-//        //input voltage vlaue
-//        voltage1 = findViewById(R.id.voltS1);
-//        voltage2 = findViewById(R.id.voltage2);
-//        voltage3 = findViewById(R.id.voltage3);
-//        voltage4 = findViewById(R.id.voltage4);
-//        voltage5 = findViewById(R.id.voltage5);
-//        voltage6 = findViewById(R.id.voltage6);
-//        voltage7 = findViewById(R.id.voltage7);
+//    public String bar3YmatrixFunctions(){
 //
-//        //input angle value
-//        angleB1 = findViewById(R.id.ang1);
-//        angleB2 = findViewById(R.id.ang2);
-//        angleB3 = findViewById(R.id.ang3);
-//        angleB4 = findViewById(R.id.ang4);
-//        angleB5 = findViewById(R.id.ang5);
-//        angleB6 = findViewById(R.id.ang6);
-//        angleB7 = findViewById(R.id.ang7);
+//        Intent intent2 = getIntent();
+//        z11 = intent2.getStringExtra("Zbus 11:");
+//        z12 = intent2.getStringExtra("Zbus 12:");
+//        z13 = intent2.getStringExtra("Zbus 13:");
+//        z22 = intent2.getStringExtra("Zbus 22:");
+//        z23 = intent2.getStringExtra("Zbus 23:");
+//        z33 = intent2.getStringExtra("Zbus 33:");
 //
-//        //input z values
-//        z11 = findViewById(R.id.ZBus11);
-//        z12 = findViewById(R.id.ZBus12);
-//        z13 = findViewById(R.id.ZBus13);
-//        z14 = findViewById(R.id.ZBus14);
-//        z15 = findViewById(R.id.ZBus15);
-//        z16 = findViewById(R.id.ZBus16);
-//        z17 = findViewById(R.id.ZBus17);
-//        z22 = findViewById(R.id.ZBus22);
-//        z23 = findViewById(R.id.ZBus23);
-//        z24 = findViewById(R.id.ZBus24);
-//        z25 = findViewById(R.id.ZBus25);
-//        z26 = findViewById(R.id.ZBus26);
-//        z27 = findViewById(R.id.ZBus27);
-//        z33 = findViewById(R.id.ZBus33);
-//        z34 = findViewById(R.id.ZBus34);
-//        z35 = findViewById(R.id.ZBus35);
-//        z36 = findViewById(R.id.ZBus36);
-//        z37 = findViewById(R.id.ZBus37);
-//        z44 = findViewById(R.id.ZBus44);
-//        z45 = findViewById(R.id.ZBus45);
-//        z46 = findViewById(R.id.ZBus46);
-//        z47 = findViewById(R.id.ZBus47);
-//        z55 = findViewById(R.id.ZBus55);
-//        z56 = findViewById(R.id.ZBus56);
-//        z57 = findViewById(R.id.ZBus57);
-//        z66 = findViewById(R.id.ZBus66);
-//        z67 = findViewById(R.id.ZBus67);
-//        z77 = findViewById(R.id.ZBus77);
-//
-//        EditText zMatrix[][] = {
-////                new android.widget.EditText[7][7];
-////        zMatrix[0][0] = z11;
-////        zMatrix[0][1] = z12;
-////        zMatrix[0][2] = z13;
-////        zMatrix[0][3] = z14;
-////        zMatrix[0][4] = z15;
-////        zMatrix[0][5] = z16;
-////        zMatrix[0][6] = z17;
-////        zMatrix[1][0] = z12;//z21
-////        zMatrix[1][1] = z22;
-////        zMatrix[1][2] = z23;
-////        zMatrix[1][3] = z24;
-////        zMatrix[1][4] = z25;
-////        zMatrix[1][5] = z26;
-////        zMatrix[1][6] = z27;
-////        zMatrix[2][0] = z13;//z31
-////        zMatrix[2][1] = z23;//z32
-////        zMatrix[2][2] = z33;
-////        zMatrix[2][3] = z34;
-////        zMatrix[2][4] = z35;
-////        zMatrix[2][5] = z36;
-////        zMatrix[2][6] = z37;
-////        zMatrix[3][0] = z14;//z41
-////        zMatrix[3][1] = z24;//z42
-////        zMatrix[3][2] = z34;//z43
-////        zMatrix[3][3] = z44;
-////        zMatrix[3][4] = z45;
-////        zMatrix[3][5] = z46;
-////        zMatrix[3][6] = z47;
-////        zMatrix[4][0] = z15;//z51
-////        zMatrix[4][1] = z25;//z52
-////        zMatrix[4][2] = z35;//z53
-////        zMatrix[4][3] = z45;//z54
-////        zMatrix[4][4] = z55;
-////        zMatrix[4][5] = z56;
-////        zMatrix[4][6] = z57;
-////        zMatrix[5][0] = z16;//z61
-////        zMatrix[5][1] = z26;//z62
-////        zMatrix[5][2] = z36;//z63
-////        zMatrix[5][3] = z46;//z64
-////        zMatrix[5][4] = z56;//z65
-////        zMatrix[5][5] = z66;
-////        zMatrix[5][6] = z67;
-////        zMatrix[6][0] = z17;//z71
-////        zMatrix[6][1] = z27;//z72
-////        zMatrix[6][2] = z37;//z73
-////        zMatrix[6][3] = z47;//z74
-////        zMatrix[6][4] = z57;//z75
-////        zMatrix[6][5] = z67;//z76
-////        zMatrix[6][6] = z77;
-//
-//                {z11, z12, z13, z14, z15, z16, z17},
-//                {z12, z22, z23, z24, z25, z26, z27},
-//                {z13, z23, z33, z34, z35, z36, z37},
-//                {z14, z24, z34, z44, z45, z46, z47},
-//                {z15, z25, z35, z45, z55, z56, z57},
-//                {z16, z26, z36, z46, z56, z66, z67},
-//                {z17, z27, z37, z47, z57, z67, z77},
-//
-////        System.out.print(zMatrix);
+//        String yMatrix[][] = {
+//                {z11, z12, z13},
+//                {z12, z22, z23},
+//                {z13, z23, z33},
 //        };
-//    }
+//
+//        return yMatrix.toString();
+//  }
 
-  /*  public void calcTheYMatrix(EditText zMatrix[][]){
+    public class ComplexNum{
+        private Number real;
+        private Number imaginary;
 
 
-//        switch{
-//            case MainActivity:
-//                break;
+        public ComplexNum(Number real, Number imaginary) {
+            this.real = real;
+            this.imaginary = imaginary;
+        }
+
+        public String add(String z1, String z2) {
+            String x[] = z1.split("\\+|j");
+            String y[] = z2.split("\\+|j");
+
+            Number z1Real = Double.parseDouble(x[0]);
+            Number z1Imaginary = Double.parseDouble(x[1]);
+
+            Number z2Real = Double.parseDouble(y[0]);
+            Number z2Imaginary = Double.parseDouble(y[1]);
+
+            return (z1Real.doubleValue() + z2Real.doubleValue()) + "+" + (z1Imaginary.doubleValue() + z2Imaginary.doubleValue())+ "j";
+        }
+
+//        public ComplexNum multiply(ComplexNum z1, ComplexNum z2)
+//        {
+//            double real1 = z1.real*z2.real - z1.imaginary*z2.imaginary;
+//            double imaginary1 = z1.real*z2.imaginary + z1.imaginary*z2.real;
+//            return new ComplexNum(real1,imaginary1);
 //        }
+//        public ComplexNum divide(ComplexNum z1, ComplexNum z2) {
+//            ComplexNum output = multiply(z1,z2.conjugate());
+//            double div = Math.pow(z2.mod(),2);
+//            return new ComplexNum(output.real/div,output.imaginary/div);
+//        }
+
+        public String divide1(double a, String z1){
+            String x[] = z1.split("\\+|j");
+
+            Number z1Real = Double.parseDouble(x[0]);
+            Number z1Imaginary = Double.parseDouble(x[1]);
+
+            return a/z1Real.doubleValue() + "+" +  a/z1Imaginary.doubleValue() + "j";
+        }
+
+//        public ComplexNum conjugate()
+//        {
+//            return new ComplexNum(this.real,-this.imaginary);
+//        }
+//
+//        public double mod()
+//        {
+//            return Math.sqrt(Math.pow(this.real,2) + Math.pow(this.imaginary,2));
+//        }
+
+
+        @Override
+        public String toString() {
+            String re = this.real+"";
+            String im = "";
+            if(this.imaginary.doubleValue() < 0)
+                im = this.imaginary+"j";
+            else
+                im = "+"+this.imaginary+"j";
+            return re+im;
+        }
+
     }
 
-*/}
+}

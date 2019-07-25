@@ -58,10 +58,10 @@ public class Functions5buses extends AppCompatActivity {
         TextView mresultTV = findViewById(R.id.displayInputs);
         mresultTV.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3 +"\n" +voltage4
                 + "\n" +voltage5 +"\n\nIterations: " +iterations +"\n\nAngles: \n" +angle1 + "\n"
-                +angle2 + "\n" +angle3 + "\n" +angle4 + "\n" +angle5 + "\n\nZ Matrix: \n" + zMatrix);
+                +angle2 + "\n" +angle3 + "\n" +angle4 + "\n" +angle5 + "\n\nZ Matrix: \n" + this.bar5MatrixFunction().toString());
     }
 
-    public String[][] bar5MatrixFunction() {
+    public int[][] bar5MatrixFunction() {
         Intent intent1 = getIntent();
 
         //input z values
@@ -80,24 +80,27 @@ public class Functions5buses extends AppCompatActivity {
         z44 = intent1.getStringExtra("Zbus 44:");
         z45 = intent1.getStringExtra("Zbus 45:");
         z55 = intent1.getStringExtra("Zbus 55:");
-//        int z11A = Integer.parseInt(z11.getText().toString());
-//        int z12A = Integer.parseInt(z12.getText().toString());
-//        int z13A = Integer.parseInt(z13.getText().toString());
-//        int z14A = Integer.parseInt(z14.getText().toString());
-//        int z15A = Integer.parseInt(z15.getText().toString());
-//        int z22A = Integer.parseInt(z22.getText().toString());
-//        int z23A = Integer.parseInt(z23.getText().toString());
-//        int z24A = Integer.parseInt(z24.getText().toString());
-//        int z25A = Integer.parseInt(z25.getText().toString());
-//        int z33A = Integer.parseInt(z33.getText().toString());
-//        int z34A = Integer.parseInt(z34.getText().toString());
-//        int z35A = Integer.parseInt(z35.getText().toString());
-//        int z44A = Integer.parseInt(z44.getText().toString());
-//        int z45A = Integer.parseInt(z45.getText().toString());
-//        int z55A = Integer.parseInt(z55.getText().toString());
+
+//        z11 = findViewById(R.id.zbus11);
+//
+        int z11A = Integer.parseInt(z11);
+        int z12A = Integer.parseInt(z12);
+        int z13A = Integer.parseInt(z13);
+        int z14A = Integer.parseInt(z14);
+        int z15A = Integer.parseInt(z15);
+        int z22A = Integer.parseInt(z22);
+        int z23A = Integer.parseInt(z23);
+        int z24A = Integer.parseInt(z24);
+        int z25A = Integer.parseInt(z25);
+        int z33A = Integer.parseInt(z33);
+        int z34A = Integer.parseInt(z34);
+        int z35A = Integer.parseInt(z35);
+        int z44A = Integer.parseInt(z44);
+        int z45A = Integer.parseInt(z45);
+        int z55A = Integer.parseInt(z55);
 
 
-        String zMatrix[][] = {
+        int zMatrix[][] = {
 //                new android.widget.EditText[5][5];
 //        zMatrix[0][0] = z11;
 //        zMatrix[0][1] = z12;
@@ -125,11 +128,11 @@ public class Functions5buses extends AppCompatActivity {
 //        zMatrix[4][3] = z45;//z54
 //        zMatrix[4][4] = z55;
 
-                {z11, z12, z13, z14, z15},
-                {z12, z22, z23, z24, z25},
-                {z13, z23, z33, z34, z35},
-                {z14, z24, z34, z44, z45},
-                {z15, z25, z35, z45, z55},
+                {z11A, z12A, z13A, z14A, z15A},
+                {z12A, z22A, z23A, z24A, z25A},
+                {z13A, z23A, z33A, z34A, z35A},
+                {z14A, z24A, z34A, z44A, z45A},
+                {z15A, z25A, z35A, z45A, z55A},
 
 //                System.out.print(zMatrix);
         };

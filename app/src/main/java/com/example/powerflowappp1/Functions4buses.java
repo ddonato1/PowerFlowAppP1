@@ -94,9 +94,9 @@ public class Functions4buses extends AppCompatActivity {
         TextView mresultTV = findViewById(R.id.displayInputs);
         mresultTV.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3 +"\n" +voltage4
                 +"\n\nIterations: " +iterations +"\n\nAngles: \n" +angle1 + "\n" +angle2 + "\n"
-                +angle3 + "\n" +angle4 + "\n\nZ Matrix: \n");
+                +angle3 + "\n" +angle4 + "\n\nZ Matrix: \n" + bar4MatrixFunction());
 
-        bar4MatrixFunction();
+//        bar4MatrixFunction();
     }
 
     public String[][] bar4MatrixFunction(){
