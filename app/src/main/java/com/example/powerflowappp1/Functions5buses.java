@@ -15,27 +15,27 @@ public class Functions5buses extends AppCompatActivity {
     String voltage3;
     String voltage4;
     String voltage5;
-    String z11;
-    String z12;
-    String z13;
-    String z14;
-    String z15;
-    String z22;
-    String z23;
-    String z24;
-    String z25;
-    String z33;
-    String z34;
-    String z35;
-    String z44;
-    String z45;
-    String z55;
     String iterations;
     String angle1;
     String angle2;
     String angle3;
     String angle4;
     String angle5;
+//    String z11;
+//    String z12;
+//    String z13;
+//    String z14;
+//    String z15;
+//    String z22;
+//    String z23;
+//    String z24;
+//    String z25;
+//    String z33;
+//    String z34;
+//    String z35;
+//    String z44;
+//    String z45;
+//    String z55;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

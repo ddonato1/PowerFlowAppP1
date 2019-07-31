@@ -16,28 +16,6 @@ public class Functions6buses extends AppCompatActivity {
     String voltage4;
     String voltage5;
     String voltage6;
-    String z11;
-    String z12;
-    String z13;
-    String z14;
-    String z15;
-    String z16;
-    String z22;
-    String z23;
-    String z24;
-    String z25;
-    String z26;
-    String z33;
-    String z34;
-    String z35;
-    String z36;
-    String z44;
-    String z45;
-    String z46;
-    String z55;
-    String z56;
-    String z66;
-    String[] myString;
     String angle6;
     String angle5;
     String angle4;
@@ -45,6 +23,29 @@ public class Functions6buses extends AppCompatActivity {
     String angle2;
     String angle1;
     String iterations;
+//    String z11;
+//    String z12;
+//    String z13;
+//    String z14;
+//    String z15;
+//    String z16;
+//    String z22;
+//    String z23;
+//    String z24;
+//    String z25;
+//    String z26;
+//    String z33;
+//    String z34;
+//    String z35;
+//    String z36;
+//    String z44;
+//    String z45;
+//    String z46;
+//    String z55;
+//    String z56;
+//    String z66;
+//    String[] myString;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
