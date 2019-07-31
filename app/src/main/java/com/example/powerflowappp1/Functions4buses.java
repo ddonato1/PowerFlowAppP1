@@ -186,7 +186,7 @@ public class Functions4buses extends AppCompatActivity {
         double y44I = 1.0/z44Imaginary;
 
         //ti 1 decimal
-        DecimalFormat df = new DecimalFormat("#.#");
+        DecimalFormat df = new DecimalFormat("#.##");
 
         String y11A = df.format(y11R) + "+" + df.format(y11I) + "j";
         String y12A = df.format(y12R) + "+" + df.format(y12I) + "j";

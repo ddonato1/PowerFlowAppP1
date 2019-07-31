@@ -102,7 +102,7 @@ public class Functions3buses extends AppCompatActivity {
         double y33I = 1.0/z33Imaginary;
 
         //ti 1 decimal
-        DecimalFormat df = new DecimalFormat("#.#");
+        DecimalFormat df = new DecimalFormat("#.##");
 
         String y11A = df.format(y11R) + "+" + df.format(y11I) + "j";
         String y12A = df.format(y12R) + "+" + df.format(y12I) + "j";
@@ -203,7 +203,7 @@ public class Functions3buses extends AppCompatActivity {
 //        return yMatrix.toString();
 //  }
 
-    public class ComplexNum{
+    private class ComplexNum{
         private Number real;
         private Number imaginary;
 
