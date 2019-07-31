@@ -396,7 +396,7 @@ public class Functions7buses extends AppCompatActivity {
         String y67A = df.format(y67R) + "+" + df.format(y67I) + "j";
         String y77A = df.format(y77R) + "+" + df.format(y77I) + "j";
 
-        TextView input = findViewById(R.id.displayMatrix3);
+        TextView input = findViewById(R.id.displayMatrix7);
         input.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3 + "\n" +voltage4
                 + "\n" +voltage5 + "\n" +voltage6 + "\n" +voltage7 +"\n\nIterations: " +iterations
                 +"\n\nAngles: \n" +angle1 + "\n" +angle2 + "\n" +angle3 + "\n" +angle4 + "\n"

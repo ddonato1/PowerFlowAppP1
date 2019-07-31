@@ -199,7 +199,7 @@ public class Functions5buses extends AppCompatActivity {
         String y45A = df.format(y45R) + "+" + df.format(y45I) + "j";
         String y55A = df.format(y55R) + "+" + df.format(y55I) + "j";
 
-        TextView input = findViewById(R.id.displayMatrix3);
+        TextView input = findViewById(R.id.displayMatrix5);
         input.setText("Voltages: \n" +voltage1 +"\n" +voltage2 + "\n" +voltage3 + "\n" +voltage4
                 + "\n" +voltage5 +"\n\nIterations: " +iterations +"\n\nAngles: \n" +angle1 + "\n"
                 +angle2 + "\n" +angle3 + "\n" +angle4 + "\n" +angle5  + "\n\nZ Matrix: \n"+ z11B
