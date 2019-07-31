@@ -25,6 +25,7 @@ public class Functions7buses extends AppCompatActivity {
     String angle5;
     String angle6;
     String angle7;
+    ComplexNum z11,z12,z13,z14,z15,z16,z17,z22,z23,z24,z25,z26,z27,z33,z34,z35,z36,z37, z44,z45,z46,z47,z55,z56,z57,z66,z67,z77;
 //    EditText angleB1;
 //    EditText angleB2;
 //    EditText angleB3;
