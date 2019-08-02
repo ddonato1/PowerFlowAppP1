@@ -270,10 +270,64 @@
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/textView19"
             android:layout_width="115dp"
             android:layout_height="38dp"
             android:layout_below="@+id/Angle4"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="98dp"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="92dp"
+            android:layout_marginRight="92dp"
+            android:text="Enter the generator value:"
+            android:textColor="#009688"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/pg"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/textView19"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Pg"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/pg2"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/pg"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Pg"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="115dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/pg2"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"

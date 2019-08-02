@@ -15,6 +15,9 @@ public class Input_3buses extends AppCompatActivity{
     EditText angNum1;
     EditText angNum2;
     EditText angNum3;
+    EditText Pg;
+    EditText Pg2;
+    EditText load;
     EditText zbus_11;
     EditText zbus_12;
     EditText zbus_13;
@@ -36,6 +39,9 @@ public class Input_3buses extends AppCompatActivity{
         angNum1 = findViewById(R.id.angle1);
         angNum2 = findViewById(R.id.angle2);
         angNum3 = findViewById(R.id.angle3);
+        Pg = findViewById(R.id.pG);
+        Pg2 = findViewById(R.id.pG2);
+        load = findViewById(R.id.load);
         zbus_11 = findViewById(R.id.z11);
         zbus_12 = findViewById(R.id.z12);
         zbus_13 = findViewById(R.id.z13);
@@ -100,6 +106,9 @@ public class Input_3buses extends AppCompatActivity{
         String angles1 = angNum1.getText().toString();
         String angles2 = angNum2.getText().toString();
         String angles3 = angNum3.getText().toString();
+        String pG = Pg.getText().toString();
+        String pG2 = Pg2.getText().toString();
+        String Load = load.getText().toString();
         String zbus11 = zbus_11.getText().toString();
         String zbus12 = zbus_12.getText().toString();
         String zbus13 = zbus_13.getText().toString();
@@ -119,6 +128,9 @@ public class Input_3buses extends AppCompatActivity{
         intent.putExtra("Angle 1:", angles1);
         intent.putExtra("Angle 2:", angles2);
         intent.putExtra("Angle 3:", angles3);
+        intent.putExtra("Pg:", pG);
+        intent.putExtra("Pg2:", pG2);
+        intent.putExtra("Pl:", Load);
         intent.putExtra("Zbus 11:", zbus11);
         intent.putExtra("Zbus 12:", zbus12);
         intent.putExtra("Zbus 13:", zbus13);

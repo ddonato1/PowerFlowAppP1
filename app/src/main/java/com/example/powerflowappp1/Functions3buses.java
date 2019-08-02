@@ -15,7 +15,7 @@ public class Functions3buses extends AppCompatActivity {
      String voltage1, voltage2, voltage3, voltage4, voltage5, voltage6, voltage7,
             angleB1, angleB2,angleB3, angleB4, angleB5, angleB6, angleB7,iter;
      ComplexNum z11,z12,z13,z14,z15,z16,z17,z22,z23,z24,z25,z26,z27,z33,z34,z35,z36,z37, z44,z45,z46,z47,z55,z56,z57,z66,z67,z77;
-
+     String Y, y, V, v, Ang, ang, d, D;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -271,4 +271,58 @@ public class Functions3buses extends AppCompatActivity {
 
     }
 
+    public void calcButton(){
+        Intent intent1 = getIntent();
+
+        //calculate the Psch and Qsch
+        //Psch
+        String Pg = intent1.getStringExtra("Pg:");
+        String Pg2 = intent1.getStringExtra("Pg2:");
+        String Pload = intent1.getStringExtra("Pl:");
+
+        String Psch;
+
+
+        //Qsch
+
+        //calculate the Pcalc and Qcalc
+        String Pcalc, Qcalc, P, Q, p, q, V;
+        int v1;
+        int v2 = Integer.parseInt(voltage2);
+        int v3 = Integer.parseInt(voltage3);
+
+//        if((Y == y12A) && (Ang == angleB2)){
+//            pc1 = Math.abs(V)*Math.abs(v)*Math.abs(y)*Math.cos(ang-D+d)+Math.abs(V)^2*Math.abs(Y)
+//                    *Math.cos(Double.parseDouble(Ang));
+//        }
+
+        //private boolean isNotInteger(String u){
+
+            try{
+                v1 = Integer.parseInt(voltage1);
+
+            }catch(NumberFormatException e){
+                e.printStackTrace();
+
+            }
+        //}
+
+
+//        if(){
+//            P = Math.abs(v2)*Math.abs(v1)
+//                    *Math.abs(y12A)*Math.cos(-+)+Math.abs(v2)^2*Math.abs(y22A)
+//                    *Math.cos(Double.parseDouble(angleB2))+Math.abs(v2)
+//                    *Math.abs(v3)*Math.abs(y23A)*Math.cos(-+));
+//        }
+//        if(){
+//            p = Math.abs(Integer.parseInt(voltage3))*Math.abs(Integer.parseInt(voltage1))
+//                    *Math.abs(y13A)*Math.cos(-+)+Math.abs(Integer.parseInt(voltage3))
+//                    *Math.abs(Integer.parseInt(voltage2)*Math.abs(y23A)*Math.cos(-+)
+//                    +Math.abs(Integer.parseInt(voltage3))^2*Math.abs(y33A)*Math.cos());
+//        }
+//        if(){
+//
+//        }
+
+    }
 }
