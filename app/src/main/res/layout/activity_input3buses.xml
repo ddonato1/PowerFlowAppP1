@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1650dp">
+        android:layout_height="1850dp">
 
         <TextView
             android:id="@+id/inputs"
@@ -247,7 +247,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/pG"
+            android:id="@+id/pG1"
             android:layout_width="115dp"
             android:layout_height="48dp"
             android:layout_below="@+id/textView19"
@@ -261,14 +261,14 @@
             android:layout_marginEnd="148dp"
             android:layout_marginRight="148dp"
             android:ems="10"
-            android:hint="Pg"
+            android:hint="Generator 1"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/pG2"
             android:layout_width="115dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/pG"
+            android:layout_below="@+id/pG1"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -279,14 +279,32 @@
             android:layout_marginEnd="148dp"
             android:layout_marginRight="148dp"
             android:ems="10"
-            android:hint="Pg"
+            android:hint="Generator 2"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/pG3"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/pG2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Generator 3"
             android:inputType="textPersonName" />
 
         <TextView
             android:id="@+id/textView20"
             android:layout_width="115dp"
             android:layout_height="38dp"
-            android:layout_below="@+id/pG2"
+            android:layout_below="@+id/pG3"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -301,7 +319,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/load"
+            android:id="@+id/load1"
             android:layout_width="115dp"
             android:layout_height="48dp"
             android:layout_below="@+id/textView20"
@@ -315,14 +333,50 @@
             android:layout_marginEnd="148dp"
             android:layout_marginRight="148dp"
             android:ems="10"
-            android:hint="Load"
+            android:hint="Load 1"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/load2"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/load1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Load 2"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/load3"
+            android:layout_width="115dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/load2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:ems="10"
+            android:hint="Load 3"
             android:inputType="textPersonName" />
 
         <TextView
             android:id="@+id/textView18"
             android:layout_width="115dp"
             android:layout_height="38dp"
-            android:layout_below="@+id/load"
+            android:layout_below="@+id/load3"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"

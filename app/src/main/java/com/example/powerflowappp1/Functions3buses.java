@@ -275,21 +275,81 @@ public class Functions3buses extends AppCompatActivity {
         Intent intent1 = getIntent();
 
         //calculate the Psch and Qsch
+        String Pg1 = intent1.getStringExtra("Generator 1:");
+        String Pg2 = intent1.getStringExtra("Generator 2:");
+        String Pg3 = intent1.getStringExtra("Generator 3:");
+        String load_1 = intent1.getStringExtra("Load 1:");
+        String load_2 = intent1.getStringExtra("Load 2:");
+        String load_3 = intent1.getStringExtra("Load 3:");
+
         //Psch
-        String Pg = intent1.getStringExtra("Pg:");
-        String Pg2 = intent1.getStringExtra("Pg2:");
-        String Pload = intent1.getStringExtra("Pl:");
+        int Psch1, Psch2, Psch3;
 
-        String Psch;
+        int pg1 = Integer.parseInt(Pg1);
+        int L_1 = Integer.parseInt(load_1);
+        Psch1 = pg1 - L_1;
 
+        int pg2 = Integer.parseInt(Pg2);
+        int L_2 = Integer.parseInt(load_2);
+        Psch2 = pg2 - L_2;
+
+        int pg3 = Integer.parseInt(Pg3);
+        int L_3 = Integer.parseInt(load_3);
+        Psch3 = pg3 - L_3;
 
         //Qsch
 
         //calculate the Pcalc and Qcalc
-        String Pcalc, Qcalc, P, Q, p, q, V;
-        int v1;
+        String Pcalc2, Pcalc3, Qcalc2 = null, Qcalc3 = null;
+        int P, Q, p, q, V;
+        int v1 = Integer.parseInt(voltage1);
         int v2 = Integer.parseInt(voltage2);
         int v3 = Integer.parseInt(voltage3);
+
+        double Ang1 = Double.parseDouble(angleB1);
+        double Ang2 = Double.parseDouble(angleB2);
+        double Ang3 = Double.parseDouble(angleB3);
+
+        //difference between angles
+        double ang21 = Ang2 - Ang1;
+        double ang22 = Ang2 - Ang2; //just in case
+        double ang23 = Ang2 - Ang3;
+        double ang31 = Ang3 - Ang1;
+        double ang32 = Ang3 - Ang2;
+        double ang33 = Ang3 - Ang3; //just in case
+
+        //calculation between angles
+        double firstAng = ang21 - Ang2 + Ang1;
+        double secondAng = ang23 - Ang2 + Ang3;
+        double firstang = ang31 - Ang3 + Ang1;
+        double secondang = ang32 - Ang3 + Ang2;
+
+        //Pcalc
+        Pcalc2 = String.valueOf(Math.abs(v2)*Math.abs(v1)*Math.abs('p')*Math.cos(firstAng)+Math.abs(v2)
+                *Math.abs('q')*Math.cos(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs('P')*Math.cos(secondAng));
+        //CHANGE 'p', 'q' and 'P' FOR THEIR RESPECTIVE VARIABLE OF Y BUS!!!!
+
+
+        Pcalc3 = String.valueOf(Math.abs(v3)*Math.abs(v1)*Math.abs('p')*Math.cos(firstang)+Math.abs(v3)
+                *Math.abs(v2) *Math.abs('q')*Math.cos(secondang)+Math.abs(v3)*Math.abs('P')*Math.cos(ang33));
+        //CHANGE 'p', 'q' and 'P' FOR THEIR RESPECTIVE VARIABLE OF Y BUS!!!!
+
+        //Qcalc
+        if(v2 == 0){
+            Qcalc2 = String.valueOf(-(Math.abs(v2)*Math.abs(v1)*Math.abs('p')*Math.sin(firstAng)+Math.abs(v2)
+                    *Math.abs('q')*Math.sin(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs('P')*Math.sin(secondAng)));
+            //CHANGE 'p', 'q' and 'P' FOR THEIR RESPECTIVE VARIABLE OF Y BUS!!!!
+        }
+
+        if(v3 == 0){
+            Qcalc3 = String.valueOf(-(Math.abs(v3)*Math.abs(v1)*Math.abs('p')*Math.sin(firstang)+Math.abs(v3)
+                    *Math.abs(v2)*Math.abs('q')*Math.sin(secondang)+Math.abs(v3)*Math.abs('P')*Math.sin(ang33)));
+            //CHANGE 'p', 'q' and 'P' FOR THEIR RESPECTIVE VARIABLE OF Y BUS!!!!
+        }
+
+//        TextView calc = findViewById(R.id.CALC);
+//        calc.setText("P schedule: \n" + Psch1 + "\n" + Psch2 + "\n" + Psch3 + "\n P calc and Q calc: \n"
+//        + Pcalc2 + "\n" + Pcalc3 + "\n" + Qcalc2 + "\n" + Qcalc3);
 
 //        if((Y == y12A) && (Ang == angleB2)){
 //            pc1 = Math.abs(V)*Math.abs(v)*Math.abs(y)*Math.cos(ang-D+d)+Math.abs(V)^2*Math.abs(Y)
@@ -297,14 +357,14 @@ public class Functions3buses extends AppCompatActivity {
 //        }
 
         //private boolean isNotInteger(String u){
-
-            try{
-                v1 = Integer.parseInt(voltage1);
-
-            }catch(NumberFormatException e){
-                e.printStackTrace();
-
-            }
+//
+//            try{
+//                v1 = Integer.parseInt(voltage1);
+//
+//            }catch(NumberFormatException e){
+//                e.printStackTrace();
+//
+//            }
         //}
 
 
