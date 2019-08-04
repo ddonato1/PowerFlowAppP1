@@ -137,20 +137,100 @@ public class Functions3buses extends AppCompatActivity {
         //"\n\n Y Matrix: \n" + 1/z11A + " " + 1/z12A + " " + 1/z13A + "\n"+
         //                1/z12A +  " "  + 1/z22A+ " " +1/z23A + "\n" + 1/z13A + " " + 1/z23A + " " + 1/z33A
 
-        //send Y bus to the method
-        Y12A = y12A;
-        Y13A = y13A;
-        Y22A = y22A;
-        Y23A = y23A;
-        Y33A = y33A;
-        Intent sendY = new Intent();
-        sendY.putExtra("Y12:", Y12A);
-        sendY.putExtra("Y13:", Y13A);
-        sendY.putExtra("Y22:", Y22A);
-        sendY.putExtra("Y23:", Y23A);
-        sendY.putExtra("Y33:", Y33A);
+//        //send Y bus to the method
+//        Y12A = y12A;
+//        Y13A = y13A;
+//        Y22A = y22A;
+//        Y23A = y23A;
+//        Y33A = y33A;
+//        Intent sendY = new Intent();
+//        sendY.putExtra("Y12:", Y12A);
+//        sendY.putExtra("Y13:", Y13A);
+//        sendY.putExtra("Y22:", Y22A);
+//        sendY.putExtra("Y23:", Y23A);
+//        sendY.putExtra("Y33:", Y33A);
+//
+//        calcButton();
 
-        calcButton();
+        //calculate the Psch and Qsch
+        String Pg1 = intent.getStringExtra("Generator 1:");
+        String Pg2 = intent.getStringExtra("Generator 2:");
+        String Pg3 = intent.getStringExtra("Generator 3:");
+        String load_1 = intent.getStringExtra("Load 1:");
+        String load_2 = intent.getStringExtra("Load 2:");
+        String load_3 = intent.getStringExtra("Load 3:");
+
+        //Psch
+        double Psch1, Psch2, Psch3;
+
+        double pg1 = Integer.parseInt(Pg1);
+        double L_1 = Integer.parseInt(load_1);
+        Psch1 = pg1 - L_1;
+
+        double pg2 = Integer.parseInt(Pg2);
+        double L_2 = Integer.parseInt(load_2);
+        Psch2 = pg2 - L_2;
+
+        double pg3 = Integer.parseInt(Pg3);
+        double L_3 = Integer.parseInt(load_3);
+        Psch3 = pg3 - L_3;
+
+        //calculate the Pcalc and Qcalc
+        String Pcalc2;
+        String Pcalc3;
+        String Qcalc2 = null;
+        String Qcalc3 = null;
+        //int P, Q, p, q, V;
+        double v1 = Double.parseDouble(voltage1);
+        double v2 = Double.parseDouble(voltage2);
+        double v3 = Double.parseDouble(voltage3);
+
+        double Ang1 = Double.parseDouble(angleB1);
+        double Ang2 = Double.parseDouble(angleB2);
+        double Ang3 = Double.parseDouble(angleB3);
+
+        double y21 = Double.parseDouble(y12A);
+        double y22 = Double.parseDouble(y22A);
+        double y23 = Double.parseDouble(y23A);
+        double y31 = Double.parseDouble(y12A);
+        double y32 = Double.parseDouble(y23A);
+        double y33 = Double.parseDouble(y33A);
+
+        //difference between angles
+        double ang21 = Ang2 - Ang1;
+        double ang22 = Ang2 - Ang2; //just in case
+        double ang23 = Ang2 - Ang3;
+        double ang31 = Ang3 - Ang1;
+        double ang32 = Ang3 - Ang2;
+        double ang33 = Ang3 - Ang3; //just in case
+
+        //calculation between angles
+        double firstAng = ang21 - Ang2 + Ang1;
+        double secondAng = ang23 - Ang2 + Ang3;
+        double firstang = ang31 - Ang3 + Ang1;
+        double secondang = ang32 - Ang3 + Ang2;
+
+        //Pcalc
+        Pcalc2 = String.valueOf(Math.abs(v2)*Math.abs(v1)*Math.abs(y21)*Math.cos(firstAng)+Math.abs(v2)
+                *Math.abs(y22)*Math.cos(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs(y23)*Math.cos(secondAng));
+
+        Pcalc3 = String.valueOf(Math.abs(v3)*Math.abs(v1)*Math.abs(y31)*Math.cos(firstang)+Math.abs(v3)
+                *Math.abs(v2)*Math.abs(y32)*Math.cos(secondang)+Math.abs(v3)*Math.abs(y33)*Math.cos(ang33));
+
+        //Qcalc
+        if(v2 == 0){
+            Qcalc2 = String.valueOf(-(Math.abs(v2)*Math.abs(v1)*Math.abs(y21)*Math.sin(firstAng)+Math.abs(v2)
+                    *Math.abs(y22)*Math.sin(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs(y23)*Math.sin(secondAng)));
+        }
+
+        if(v3 == 0){
+            Qcalc3 = String.valueOf(-(Math.abs(v3)*Math.abs(v1)*Math.abs(y31)*Math.sin(firstang)+Math.abs(v3)
+                    *Math.abs(v2)*Math.abs(y32)*Math.sin(secondang)+Math.abs(v3)*Math.abs(y33)*Math.sin(ang33)));
+        }
+
+        TextView calc = findViewById(R.id.CALC);
+        calc.setText("P schedule: \n" + Psch1 + "\n" + Psch2 + "\n" + Psch3 + "\n P calc and Q calc: \n"
+                + Pcalc2 + "\n" + Pcalc3 + "\n" + Qcalc2 + "\n" + Qcalc3);
     }
 
 //    public String bar3MatrixFunction(){
@@ -282,128 +362,126 @@ public class Functions3buses extends AppCompatActivity {
 
     }
 
-    public void calcButton(){
-        Intent intent1 = getIntent();
-
-        //calculate the Psch and Qsch
-        String Pg1 = intent1.getStringExtra("Generator 1:");
-        String Pg2 = intent1.getStringExtra("Generator 2:");
-        String Pg3 = intent1.getStringExtra("Generator 3:");
-        String load_1 = intent1.getStringExtra("Load 1:");
-        String load_2 = intent1.getStringExtra("Load 2:");
-        String load_3 = intent1.getStringExtra("Load 3:");
-
-        //Psch
-        int Psch1, Psch2, Psch3;
-
-        int pg1 = Integer.parseInt(Pg1);
-        int L_1 = Integer.parseInt(load_1);
-        Psch1 = pg1 - L_1;
-
-        int pg2 = Integer.parseInt(Pg2);
-        int L_2 = Integer.parseInt(load_2);
-        Psch2 = pg2 - L_2;
-
-        int pg3 = Integer.parseInt(Pg3);
-        int L_3 = Integer.parseInt(load_3);
-        Psch3 = pg3 - L_3;
-
-        //Qsch
-
-        //calculate the Pcalc and Qcalc
-        String Pcalc2, Pcalc3, Qcalc2 = null, Qcalc3 = null;
-        //int P, Q, p, q, V;
-        int v1 = Integer.parseInt(voltage1);
-        int v2 = Integer.parseInt(voltage2);
-        int v3 = Integer.parseInt(voltage3);
-
-        double Ang1 = Double.parseDouble(angleB1);
-        double Ang2 = Double.parseDouble(angleB2);
-        double Ang3 = Double.parseDouble(angleB3);
-
-
-        Intent receiveY = getIntent();
-        String y21A = receiveY.getStringExtra("Y12:");
-        String y22A = receiveY.getStringExtra("Y22:");
-        String y23A = receiveY.getStringExtra("Y23:");
-        String y31A = receiveY.getStringExtra("Y13:");
-        String y32A = receiveY.getStringExtra("Y23:");
-        String y33A = receiveY.getStringExtra("Y33:");
-        int y21 = Integer.parseInt(y21A);
-        int y22 = Integer.parseInt(y22A);
-        int y23 = Integer.parseInt(y23A);
-        int y31 = Integer.parseInt(y31A);
-        int y32 = Integer.parseInt(y32A);
-        int y33 = Integer.parseInt(y33A);
-
-        //difference between angles
-        double ang21 = Ang2 - Ang1;
-        double ang22 = Ang2 - Ang2; //just in case
-        double ang23 = Ang2 - Ang3;
-        double ang31 = Ang3 - Ang1;
-        double ang32 = Ang3 - Ang2;
-        double ang33 = Ang3 - Ang3; //just in case
-
-        //calculation between angles
-        double firstAng = ang21 - Ang2 + Ang1;
-        double secondAng = ang23 - Ang2 + Ang3;
-        double firstang = ang31 - Ang3 + Ang1;
-        double secondang = ang32 - Ang3 + Ang2;
-
-        //Pcalc
-        Pcalc2 = String.valueOf(Math.abs(v2)*Math.abs(v1)*Math.abs(y21)*Math.cos(firstAng)+Math.abs(v2)
-                *Math.abs(y22)*Math.cos(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs(y23)*Math.cos(secondAng));
-
-        Pcalc3 = String.valueOf(Math.abs(v3)*Math.abs(v1)*Math.abs(y31)*Math.cos(firstang)+Math.abs(v3)
-                *Math.abs(v2) *Math.abs(y32)*Math.cos(secondang)+Math.abs(v3)*Math.abs(y33)*Math.cos(ang33));
-
-        //Qcalc
-        if(v2 == 0){
-            Qcalc2 = String.valueOf(-(Math.abs(v2)*Math.abs(v1)*Math.abs(y21)*Math.sin(firstAng)+Math.abs(v2)
-                    *Math.abs(y22)*Math.sin(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs(y23)*Math.sin(secondAng)));
-        }
-
-        if(v3 == 0){
-            Qcalc3 = String.valueOf(-(Math.abs(v3)*Math.abs(v1)*Math.abs(y31)*Math.sin(firstang)+Math.abs(v3)
-                    *Math.abs(v2)*Math.abs(y32)*Math.sin(secondang)+Math.abs(v3)*Math.abs(y33)*Math.sin(ang33)));
-        }
-
-        TextView calc = findViewById(R.id.CALC);
-        calc.setText("P schedule: \n" + Psch1 + "\n" + Psch2 + "\n" + Psch3 + "\n P calc and Q calc: \n"
-        + Pcalc2 + "\n" + Pcalc3 + "\n" + Qcalc2 + "\n" + Qcalc3);
-
-//        if((Y == y12A) && (Ang == angleB2)){
-//            pc1 = Math.abs(V)*Math.abs(v)*Math.abs(y)*Math.cos(ang-D+d)+Math.abs(V)^2*Math.abs(Y)
-//                    *Math.cos(Double.parseDouble(Ang));
-//        }
-
-        //private boolean isNotInteger(String u){
+//    public void calcButton(){
+//        Intent intent1 = getIntent();
 //
-//            try{
-//                v1 = Integer.parseInt(voltage1);
+//        //calculate the Psch and Qsch
+//        String Pg1 = intent1.getStringExtra("Generator 1:");
+//        String Pg2 = intent1.getStringExtra("Generator 2:");
+//        String Pg3 = intent1.getStringExtra("Generator 3:");
+//        String load_1 = intent1.getStringExtra("Load 1:");
+//        String load_2 = intent1.getStringExtra("Load 2:");
+//        String load_3 = intent1.getStringExtra("Load 3:");
 //
-//            }catch(NumberFormatException e){
-//                e.printStackTrace();
+//        //Psch
+//        int Psch1, Psch2, Psch3;
 //
-//            }
-        //}
-
-
-//        if(){
-//            P = Math.abs(v2)*Math.abs(v1)
-//                    *Math.abs(y12A)*Math.cos(-+)+Math.abs(v2)^2*Math.abs(y22A)
-//                    *Math.cos(Double.parseDouble(angleB2))+Math.abs(v2)
-//                    *Math.abs(v3)*Math.abs(y23A)*Math.cos(-+));
-//        }
-//        if(){
-//            p = Math.abs(Integer.parseInt(voltage3))*Math.abs(Integer.parseInt(voltage1))
-//                    *Math.abs(y13A)*Math.cos(-+)+Math.abs(Integer.parseInt(voltage3))
-//                    *Math.abs(Integer.parseInt(voltage2)*Math.abs(y23A)*Math.cos(-+)
-//                    +Math.abs(Integer.parseInt(voltage3))^2*Math.abs(y33A)*Math.cos());
-//        }
-//        if(){
+//        int pg1 = Integer.parseInt(Pg1);
+//        int L_1 = Integer.parseInt(load_1);
+//        Psch1 = pg1 - L_1;
 //
+//        int pg2 = Integer.parseInt(Pg2);
+//        int L_2 = Integer.parseInt(load_2);
+//        Psch2 = pg2 - L_2;
+//
+//        int pg3 = Integer.parseInt(Pg3);
+//        int L_3 = Integer.parseInt(load_3);
+//        Psch3 = pg3 - L_3;
+//
+//        //Qsch
+//
+//        //calculate the Pcalc and Qcalc
+//        String Pcalc2, Pcalc3, Qcalc2 = null, Qcalc3 = null;
+//        //int P, Q, p, q, V;
+//        int v1 = Integer.parseInt(voltage1);
+//        int v2 = Integer.parseInt(voltage2);
+//        int v3 = Integer.parseInt(voltage3);
+//
+//        double Ang1 = Double.parseDouble(angleB1);
+//        double Ang2 = Double.parseDouble(angleB2);
+//        double Ang3 = Double.parseDouble(angleB3);
+//
+//
+//        Intent receiveY = getIntent();
+//        String y21A = receiveY.getStringExtra("Y12:");
+//        String y22A = receiveY.getStringExtra("Y22:");
+//        String y23A = receiveY.getStringExtra("Y23:");
+//        String y31A = receiveY.getStringExtra("Y13:");
+//        String y32A = receiveY.getStringExtra("Y23:");
+//        String y33A = receiveY.getStringExtra("Y33:");
+//        int y21 = Integer.parseInt(y21A);
+//        int y22 = Integer.parseInt(y22A);
+//        int y23 = Integer.parseInt(y23A);
+//        int y31 = Integer.parseInt(y31A);
+//        int y32 = Integer.parseInt(y32A);
+//        int y33 = Integer.parseInt(y33A);
+//
+//        //difference between angles
+//        double ang21 = Ang2 - Ang1;
+//        double ang22 = Ang2 - Ang2; //just in case
+//        double ang23 = Ang2 - Ang3;
+//        double ang31 = Ang3 - Ang1;
+//        double ang32 = Ang3 - Ang2;
+//        double ang33 = Ang3 - Ang3; //just in case
+//
+//        //calculation between angles
+//        double firstAng = ang21 - Ang2 + Ang1;
+//        double secondAng = ang23 - Ang2 + Ang3;
+//        double firstang = ang31 - Ang3 + Ang1;
+//        double secondang = ang32 - Ang3 + Ang2;
+//
+//        //Pcalc
+//        Pcalc2 = String.valueOf(Math.abs(v2)*Math.abs(v1)*Math.abs(y21)*Math.cos(firstAng)+Math.abs(v2)
+//                *Math.abs(y22)*Math.cos(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs(y23)*Math.cos(secondAng));
+//
+//        Pcalc3 = String.valueOf(Math.abs(v3)*Math.abs(v1)*Math.abs(y31)*Math.cos(firstang)+Math.abs(v3)
+//                *Math.abs(v2) *Math.abs(y32)*Math.cos(secondang)+Math.abs(v3)*Math.abs(y33)*Math.cos(ang33));
+//
+//        //Qcalc
+//        if(v2 == 0){
+//            Qcalc2 = String.valueOf(-(Math.abs(v2)*Math.abs(v1)*Math.abs(y21)*Math.sin(firstAng)+Math.abs(v2)
+//                    *Math.abs(y22)*Math.sin(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs(y23)*Math.sin(secondAng)));
 //        }
-
-    }
+//
+//        if(v3 == 0){
+//            Qcalc3 = String.valueOf(-(Math.abs(v3)*Math.abs(v1)*Math.abs(y31)*Math.sin(firstang)+Math.abs(v3)
+//                    *Math.abs(v2)*Math.abs(y32)*Math.sin(secondang)+Math.abs(v3)*Math.abs(y33)*Math.sin(ang33)));
+//        }
+//
+//        TextView calc = findViewById(R.id.CALC);
+//        calc.setText("P schedule: \n" + Psch1 + "\n" + Psch2 + "\n" + Psch3 + "\n P calc and Q calc: \n"
+//        + Pcalc2 + "\n" + Pcalc3 + "\n" + Qcalc2 + "\n" + Qcalc3);
+////        if((Y == y12A) && (Ang == angleB2)){
+////            pc1 = Math.abs(V)*Math.abs(v)*Math.abs(y)*Math.cos(ang-D+d)+Math.abs(V)^2*Math.abs(Y)
+////                    *Math.cos(Double.parseDouble(Ang));
+////        }
+//
+//        //private boolean isNotInteger(String u){
+////
+////            try{
+////                v1 = Integer.parseInt(voltage1);
+////
+////            }catch(NumberFormatException e){
+////                e.printStackTrace();
+////
+////            }
+//        //}
+//
+//
+////        if(){
+////            P = Math.abs(v2)*Math.abs(v1)
+////                    *Math.abs(y12A)*Math.cos(-+)+Math.abs(v2)^2*Math.abs(y22A)
+////                    *Math.cos(Double.parseDouble(angleB2))+Math.abs(v2)
+////                    *Math.abs(v3)*Math.abs(y23A)*Math.cos(-+));
+////        }
+////        if(){
+////            p = Math.abs(Integer.parseInt(voltage3))*Math.abs(Integer.parseInt(voltage1))
+////                    *Math.abs(y13A)*Math.cos(-+)+Math.abs(Integer.parseInt(voltage3))
+////                    *Math.abs(Integer.parseInt(voltage2)*Math.abs(y23A)*Math.cos(-+)
+////                    +Math.abs(Integer.parseInt(voltage3))^2*Math.abs(y33A)*Math.cos());
+////        }
+////        if(){
+////
+////        }
+//    }
 }
