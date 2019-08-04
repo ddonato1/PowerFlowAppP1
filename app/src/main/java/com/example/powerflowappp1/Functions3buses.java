@@ -15,7 +15,7 @@ public class Functions3buses extends AppCompatActivity {
      String voltage1, voltage2, voltage3, voltage4, voltage5, voltage6, voltage7,
             angleB1, angleB2,angleB3, angleB4, angleB5, angleB6, angleB7,iter;
      ComplexNum z11,z12,z13,z14,z15,z16,z17,z22,z23,z24,z25,z26,z27,z33,z34,z35,z36,z37, z44,z45,z46,z47,z55,z56,z57,z66,z67,z77;
-     String Y, y, V, v, Ang, ang, d, D;
+     String Y11A, Y12A, Y13A, Y22A, Y23A, Y33A;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,14 +111,11 @@ public class Functions3buses extends AppCompatActivity {
         String y23A = df.format(y23R) + "+" + df.format(y23I) + "j";
         String y33A = df.format(y33R) + "+" + df.format(y33I) + "j";
 
-
 //                double z12A = Double.parseDouble(z12);
 //        double z13A = Double.parseDouble(z13);
 //        double z22A = Double.parseDouble(z22);
 //        double z23A = Double.parseDouble(z23);
 //        double z33A = Double.parseDouble(z33);
-
-
 
         iter = intent.getStringExtra("Iterations:");
 
@@ -140,6 +137,18 @@ public class Functions3buses extends AppCompatActivity {
         //"\n\n Y Matrix: \n" + 1/z11A + " " + 1/z12A + " " + 1/z13A + "\n"+
         //                1/z12A +  " "  + 1/z22A+ " " +1/z23A + "\n" + 1/z13A + " " + 1/z23A + " " + 1/z33A
 
+        //send Y bus to the method
+        Y12A = y12A;
+        Y13A = y13A;
+        Y22A = y22A;
+        Y23A = y23A;
+        Y33A = y33A;
+        Intent sendY = new Intent();
+        sendY.putExtra("Y12:", Y12A);
+        sendY.putExtra("Y13:", Y13A);
+        sendY.putExtra("Y22:", Y22A);
+        sendY.putExtra("Y23:", Y23A);
+        sendY.putExtra("Y33:", Y33A);
     }
 
 //    public String bar3MatrixFunction(){
@@ -310,6 +319,21 @@ public class Functions3buses extends AppCompatActivity {
         double Ang2 = Double.parseDouble(angleB2);
         double Ang3 = Double.parseDouble(angleB3);
 
+
+        Intent receiveY = getIntent();
+        String y21A = receiveY.getStringExtra("Y12:");
+        String y22A = receiveY.getStringExtra("Y22:");
+        String y23A = receiveY.getStringExtra("Y23:");
+        String y31A = receiveY.getStringExtra("Y13:");
+        String y32A = receiveY.getStringExtra("Y23:");
+        String y33A = receiveY.getStringExtra("Y33:");
+        int y21 = Integer.parseInt(y21A);
+        int y22 = Integer.parseInt(y22A);
+        int y23 = Integer.parseInt(y23A);
+        int y31 = Integer.parseInt(y31A);
+        int y32 = Integer.parseInt(y32A);
+        int y33 = Integer.parseInt(y33A);
+
         //difference between angles
         double ang21 = Ang2 - Ang1;
         double ang22 = Ang2 - Ang2; //just in case
@@ -325,25 +349,25 @@ public class Functions3buses extends AppCompatActivity {
         double secondang = ang32 - Ang3 + Ang2;
 
         //Pcalc
-        Pcalc2 = String.valueOf(Math.abs(v2)*Math.abs(v1)*Math.abs('p')*Math.cos(firstAng)+Math.abs(v2)
-                *Math.abs('q')*Math.cos(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs('P')*Math.cos(secondAng));
+        Pcalc2 = String.valueOf(Math.abs(v2)*Math.abs(v1)*Math.abs(y21)*Math.cos(firstAng)+Math.abs(v2)
+                *Math.abs(y22)*Math.cos(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs(y23)*Math.cos(secondAng));
         //CHANGE 'p', 'q' and 'P' FOR THEIR RESPECTIVE VARIABLE OF Y BUS!!!!
 
 
-        Pcalc3 = String.valueOf(Math.abs(v3)*Math.abs(v1)*Math.abs('p')*Math.cos(firstang)+Math.abs(v3)
-                *Math.abs(v2) *Math.abs('q')*Math.cos(secondang)+Math.abs(v3)*Math.abs('P')*Math.cos(ang33));
+        Pcalc3 = String.valueOf(Math.abs(v3)*Math.abs(v1)*Math.abs(y31)*Math.cos(firstang)+Math.abs(v3)
+                *Math.abs(v2) *Math.abs(y32)*Math.cos(secondang)+Math.abs(v3)*Math.abs(y33)*Math.cos(ang33));
         //CHANGE 'p', 'q' and 'P' FOR THEIR RESPECTIVE VARIABLE OF Y BUS!!!!
 
         //Qcalc
         if(v2 == 0){
-            Qcalc2 = String.valueOf(-(Math.abs(v2)*Math.abs(v1)*Math.abs('p')*Math.sin(firstAng)+Math.abs(v2)
-                    *Math.abs('q')*Math.sin(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs('P')*Math.sin(secondAng)));
+            Qcalc2 = String.valueOf(-(Math.abs(v2)*Math.abs(v1)*Math.abs(y21)*Math.sin(firstAng)+Math.abs(v2)
+                    *Math.abs(y22)*Math.sin(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs(y23)*Math.sin(secondAng)));
             //CHANGE 'p', 'q' and 'P' FOR THEIR RESPECTIVE VARIABLE OF Y BUS!!!!
         }
 
         if(v3 == 0){
-            Qcalc3 = String.valueOf(-(Math.abs(v3)*Math.abs(v1)*Math.abs('p')*Math.sin(firstang)+Math.abs(v3)
-                    *Math.abs(v2)*Math.abs('q')*Math.sin(secondang)+Math.abs(v3)*Math.abs('P')*Math.sin(ang33)));
+            Qcalc3 = String.valueOf(-(Math.abs(v3)*Math.abs(v1)*Math.abs(y31)*Math.sin(firstang)+Math.abs(v3)
+                    *Math.abs(v2)*Math.abs(y32)*Math.sin(secondang)+Math.abs(v3)*Math.abs(y33)*Math.sin(ang33)));
             //CHANGE 'p', 'q' and 'P' FOR THEIR RESPECTIVE VARIABLE OF Y BUS!!!!
         }
 
