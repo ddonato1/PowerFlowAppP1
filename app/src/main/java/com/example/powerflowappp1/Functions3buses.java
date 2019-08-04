@@ -149,6 +149,8 @@ public class Functions3buses extends AppCompatActivity {
         sendY.putExtra("Y22:", Y22A);
         sendY.putExtra("Y23:", Y23A);
         sendY.putExtra("Y33:", Y33A);
+
+        calcButton();
     }
 
 //    public String bar3MatrixFunction(){
@@ -310,7 +312,7 @@ public class Functions3buses extends AppCompatActivity {
 
         //calculate the Pcalc and Qcalc
         String Pcalc2, Pcalc3, Qcalc2 = null, Qcalc3 = null;
-        int P, Q, p, q, V;
+        //int P, Q, p, q, V;
         int v1 = Integer.parseInt(voltage1);
         int v2 = Integer.parseInt(voltage2);
         int v3 = Integer.parseInt(voltage3);
@@ -351,29 +353,24 @@ public class Functions3buses extends AppCompatActivity {
         //Pcalc
         Pcalc2 = String.valueOf(Math.abs(v2)*Math.abs(v1)*Math.abs(y21)*Math.cos(firstAng)+Math.abs(v2)
                 *Math.abs(y22)*Math.cos(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs(y23)*Math.cos(secondAng));
-        //CHANGE 'p', 'q' and 'P' FOR THEIR RESPECTIVE VARIABLE OF Y BUS!!!!
-
 
         Pcalc3 = String.valueOf(Math.abs(v3)*Math.abs(v1)*Math.abs(y31)*Math.cos(firstang)+Math.abs(v3)
                 *Math.abs(v2) *Math.abs(y32)*Math.cos(secondang)+Math.abs(v3)*Math.abs(y33)*Math.cos(ang33));
-        //CHANGE 'p', 'q' and 'P' FOR THEIR RESPECTIVE VARIABLE OF Y BUS!!!!
 
         //Qcalc
         if(v2 == 0){
             Qcalc2 = String.valueOf(-(Math.abs(v2)*Math.abs(v1)*Math.abs(y21)*Math.sin(firstAng)+Math.abs(v2)
                     *Math.abs(y22)*Math.sin(ang22)+Math.abs(v2)*Math.abs(v3)*Math.abs(y23)*Math.sin(secondAng)));
-            //CHANGE 'p', 'q' and 'P' FOR THEIR RESPECTIVE VARIABLE OF Y BUS!!!!
         }
 
         if(v3 == 0){
             Qcalc3 = String.valueOf(-(Math.abs(v3)*Math.abs(v1)*Math.abs(y31)*Math.sin(firstang)+Math.abs(v3)
                     *Math.abs(v2)*Math.abs(y32)*Math.sin(secondang)+Math.abs(v3)*Math.abs(y33)*Math.sin(ang33)));
-            //CHANGE 'p', 'q' and 'P' FOR THEIR RESPECTIVE VARIABLE OF Y BUS!!!!
         }
 
-//        TextView calc = findViewById(R.id.CALC);
-//        calc.setText("P schedule: \n" + Psch1 + "\n" + Psch2 + "\n" + Psch3 + "\n P calc and Q calc: \n"
-//        + Pcalc2 + "\n" + Pcalc3 + "\n" + Qcalc2 + "\n" + Qcalc3);
+        TextView calc = findViewById(R.id.CALC);
+        calc.setText("P schedule: \n" + Psch1 + "\n" + Psch2 + "\n" + Psch3 + "\n P calc and Q calc: \n"
+        + Pcalc2 + "\n" + Pcalc3 + "\n" + Qcalc2 + "\n" + Qcalc3);
 
 //        if((Y == y12A) && (Ang == angleB2)){
 //            pc1 = Math.abs(V)*Math.abs(v)*Math.abs(y)*Math.cos(ang-D+d)+Math.abs(V)^2*Math.abs(Y)
